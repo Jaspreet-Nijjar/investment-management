@@ -22,7 +22,11 @@ function App() {
     )
   );
 
-  return <></>;
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App;
