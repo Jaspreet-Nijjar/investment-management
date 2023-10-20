@@ -1,9 +1,8 @@
 export default {
-  transform: {
-    '^.+\\.jsx?$': 'babel-jest',
-  },
+  testEnvironment: 'jsdom',
 
   transform: {
+    '^.+\\.jsx?$': 'babel-jest',
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
 };
