@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import { Homepage, News, Portfolio, Stocks, Cryptocurrencies } from './pages';
+import RootLayout from './layouts/RootLayout';
 
 function App() {
   const router = createBrowserRouter(
