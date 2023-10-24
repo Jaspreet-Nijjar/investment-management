@@ -5,7 +5,7 @@ import {
 } from 'react-icons/ai';
 import { BiMoneyWithdraw } from 'react-icons/bi';
 import { BsPieChart } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import Logo from '../../images/logo.png';
 
 export default function Navbar() {
@@ -17,39 +17,54 @@ export default function Navbar() {
         </Link>
       </div>
 
-      <div className="flex content-center text-white hover:text-orange-500 transition ease-out duration-500 p-2">
-        <AiOutlineHome size={20} />
-        <Link to="/" className="mx-2">
+      <div className="nav">
+        <NavLink
+          to="/"
+          className="flex content-center text-white hover:text-orange-500 transition ease-out duration-500 p-2"
+        >
+          <AiOutlineHome size={20} className="mx-2" />
           Home
-        </Link>
+        </NavLink>
       </div>
 
-      <div className="flex content-center text-white hover:text-orange-500 transition ease-out duration-500 p-2">
-        <BsPieChart size={20} />
-        <Link to="/portfolio" className="mx-2">
+      <div className="nav">
+        <NavLink
+          to="/portfolio"
+          className="flex content-center text-white hover:text-orange-500 transition ease-out duration-500 p-2"
+        >
+          <BsPieChart size={20} className="mx-2" />
           Portfolio
-        </Link>
+        </NavLink>
       </div>
 
-      <div className="flex content-center text-white hover:text-orange-500 transition ease-out duration-500 p-2">
-        <BiMoneyWithdraw size={20} />
-        <Link to="/stocks" className="mx-2">
+      <div className="nav">
+        <NavLink
+          to="/stocks"
+          className="flex content-center text-white hover:text-orange-500 transition ease-out duration-500 p-2"
+        >
+          <BiMoneyWithdraw size={20} className="mx-2" />
           Stocks
-        </Link>
+        </NavLink>
       </div>
 
-      <div className="flex content-center text-white hover:text-orange-500 transition ease-out duration-500 p-2">
-        <AiOutlineFundProjectionScreen size={20} />
-        <Link to="/cryptocurrencies" className="mx-2">
+      <div className="nav">
+        <NavLink
+          to="/cryptocurrencies"
+          className="flex content-center text-white hover:text-orange-500 transition ease-out duration-500 p-2"
+        >
+          <AiOutlineFundProjectionScreen size={20} className="mx-2" />
           Cryptocurrencies
-        </Link>
+        </NavLink>
       </div>
 
-      <div className="flex content-center text-white hover:text-orange-500 transition ease-out duration-500 p-2">
-        <AiOutlineBulb size={20} />
-        <Link to="/news" className="mx-2">
+      <div className="nav">
+        <NavLink
+          to="/news"
+          className="flex content-center text-white hover:text-orange-500 transition ease-out duration-500 p-2"
+        >
+          <AiOutlineBulb size={20} className="mx-2" />
           News
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
