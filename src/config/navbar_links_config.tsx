@@ -5,8 +5,17 @@ import {
 } from 'react-icons/ai';
 import { BiMoneyWithdraw } from 'react-icons/bi';
 import { BsPieChart } from 'react-icons/bs';
+import { ReactElement } from 'react';
 
-export const navbar_config = {
+type NavItem = {
+  path: string;
+  Icon: ReactElement;
+  label: string;
+};
+
+type NavBarConfig = Record<string, NavItem>;
+
+export const navbar_config: NavBarConfig = {
   Home: {
     path: '/',
     Icon: <AiOutlineHome />,
