@@ -19,7 +19,7 @@ export default function Navbar() {
               className="flex content-center items-center text-white hover:text-orange-500 transition ease-out duration-500 p-2"
             >
               {Icon}
-              <span className="ml-2"> {label}</span>
+              <span className="ml-2">{label}</span>
             </NavLink>
           </div>
         ))}
