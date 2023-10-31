@@ -2,7 +2,7 @@ import { NavLink, Link } from 'react-router-dom';
 import Logo from '../../images/logo.png';
 import { navbar_config } from '../../config/navbar_links_config';
 
-export default function Navbar() {
+export const Navbar = () => {
   return (
     <nav className="bg-black h-screen fixed left-0 w-58 p-8">
       <div className="logo mb-10">
@@ -26,4 +26,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
