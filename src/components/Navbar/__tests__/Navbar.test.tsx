@@ -35,4 +35,30 @@ describe('#Navbar', () => {
     expect(cryptocurrenciesPageContent).toBeInTheDocument();
     expect(newsPageContent).toBeInTheDocument();
   });
+
+  it('should display the logo and the correct alt text', () => {
+    render(
+      <MemoryRouter>
+        <Navbar />
+      </MemoryRouter>
+    );
+
+    const logoImage = screen.getByAltText('virtual portfolio main logo');
+
+    expect(logoImage).toBeInTheDocument();
+    expect(logoImage).toHaveAttribute('alt', 'virtual portfolio main logo');
+  });
+
+  it('should go to the homepage when the user clicks on the logo', () => {
+    render(
+      <MemoryRouter>
+        <Navbar />
+      </MemoryRouter>
+    );
+
+    const logoImage = screen.getByAltText('virtual portfolio main logo');
+    userEvent.click(logoImage);
+
+    expect(window.location.pathname).toBe('/');
+  });
 });
