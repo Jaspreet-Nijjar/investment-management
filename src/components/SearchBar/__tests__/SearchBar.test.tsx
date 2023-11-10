@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import { SearchBar } from '../SearchBar';
@@ -16,7 +16,7 @@ describe('#SearchBar', () => {
     const inputElement = screen.getByPlaceholderText(/search/i);
     expect(inputElement).toBeInTheDocument();
   }),
-    it('update the search value when the user enters text in the field', () => {
+    it('update the search value when the user enters text in the field', async () => {
       render(
         <Provider store={store}>
           <SearchBar placeholder="Search" />
@@ -29,8 +29,10 @@ describe('#SearchBar', () => {
 
       userEvent.type(inputElement, 'test value');
 
-      userEvent.type(inputElement, '{ enter }');
+      await waitFor(() => {
+        expect(inputElement.value).toBe('test value');
+      });
 
-      expect(inputElement.value).toBe('test value');
+      userEvent.keyboard('{enter}');
     });
 });
