@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { searchQuery, submitSearch } from './searchBarSlice';
+import { searchQuery } from './searchBarSlice';
 
 interface SearchBarProps {
   placeholder: string;
@@ -19,13 +19,8 @@ export const SearchBar = ({ placeholder }: SearchBarProps) => {
     dispatch(searchQuery(e.target.value));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    dispatch(submitSearch());
-  };
-
   return (
-    <form className="ml-60" onSubmit={handleSubmit}>
+    <section className="ml-60">
       <input
         type="text"
         value={searchBar.value}
@@ -33,6 +28,6 @@ export const SearchBar = ({ placeholder }: SearchBarProps) => {
         placeholder={placeholder}
         className="mx-auto focus:outline-none p-2 border border-gray-300 rounded w-30 mt-2 md:w-72 lg:w-96"
       />
-    </form>
+    </section>
   );
 };

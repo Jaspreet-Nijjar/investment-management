@@ -13,14 +13,10 @@ export const searchBarSlice = createSlice({
   initialState,
   reducers: {
     searchQuery: (state, action: PayloadAction<string>) => {
-      state.value = action.payload;
-    },
-    submitSearch: (state) => {
-      console.log('Form submitted with value:', state.value);
-      state.value = '';
+      return { ...state, value: action.payload };
     },
   },
 });
 
-export const { searchQuery, submitSearch } = searchBarSlice.actions;
+export const { searchQuery } = searchBarSlice.actions;
 export default searchBarSlice.reducer;
