@@ -18,7 +18,7 @@ export const SearchBar = ({ placeholder }: SearchBarProps) => {
   };
 
   return (
-    <section className="ml-20 flex rounded items-center">
+    <section className="ml-60">
       <input
         type="text"
         value={searchBar}
