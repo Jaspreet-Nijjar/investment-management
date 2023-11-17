@@ -16,4 +16,4 @@ export const coinGeckoApi = createApi({
   }),
 });
 
-export const { useGetCoinsQuery } = coinGeckoApi;
+export const { useGetCoinsQuery, useGetCoinSummaryDataQuery } = coinGeckoApi;
