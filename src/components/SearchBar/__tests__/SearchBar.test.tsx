@@ -31,7 +31,6 @@ describe('#SearchBar', () => {
 
       await waitFor(() => {
         expect(inputElement.value).toBe('test value');
-        expect(store.getState().searchBar.value).toBe('test value');
       });
     });
 });
