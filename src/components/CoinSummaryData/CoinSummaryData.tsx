@@ -5,7 +5,7 @@ export const CoinSummaryData = () => {
   const { data } = useGetCoinSummaryDataQuery(1);
 
   return (
-    <section className="ml-60 flex justify-around font-bold text-gray-500 ml-10 mt-4">
+    <section className="ml-60 flex justify-around font-bold text-gray-500 mt-4">
       <p>Coins: {data?.data?.active_cryptocurrencies}</p>
       <p>Exchanges: {data?.data?.markets}</p>
       <p>Market Cap: ${millify(data?.data?.total_market_cap?.usd)}</p>
