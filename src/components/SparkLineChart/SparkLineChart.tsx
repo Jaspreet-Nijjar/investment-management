@@ -58,8 +58,10 @@ const SparkLineChart = ({ coinId }) => {
   };
 
   return (
-    <div className="hidden lg:block flex justify-center">
-      <Line data={chartData} options={options} />
+    <div className="mx-auto" style={{ maxWidth: '600px' }}>
+      <div className="hidden lg:block">
+        <Line data={chartData} options={options} />
+      </div>
     </div>
   );
 };

@@ -24,14 +24,12 @@ export const CryptocurrencyHeader = () => {
   ];
 
   return (
-    <div>
-      <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-30 p-4 border-b border-gray-200 text-sm max-w-screen-lg mx-auto">
-        {headers.map((header, index) => (
-          <div key={index} className={headerClasses[index]}>
-            {header}
-          </div>
-        ))}
-      </section>
-    </div>
+    <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-30 p-4 border-b border-gray-200 text-sm">
+      {headers.map((header, index) => (
+        <div key={index} className={headerClasses[index]}>
+          {header}
+        </div>
+      ))}
+    </section>
   );
 };
