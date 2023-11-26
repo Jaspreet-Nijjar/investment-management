@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useGetCoinsQuery } from '../../services/cryptoAPI';
-import { CoinList } from './CoinList';
+import CoinList from './CoinList';
 import { useSelector } from 'react-redux';
 import { CryptocurrencyHeader } from './CryptocurrencyHeader';
 

@@ -18,10 +18,12 @@ interface CoinListProps {
   data: CoinProps[];
 }
 
-export const CoinList: React.FC<CoinListProps> = ({ data }) => (
+const CoinList: React.FC<CoinListProps> = ({ data }) => (
   <div>
     {data.map((coin: CoinProps) => (
       <CoinRow key={coin.id} coin={coin} />
     ))}
   </div>
 );
+
+export default CoinList;
