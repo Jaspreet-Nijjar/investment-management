@@ -16,6 +16,9 @@ export const coinGeckoApi = createApi({
     getCoinSummaryData: builder.query({
       query: () => '/global',
     }),
+    getTrendingCoins: builder.query({
+      query: () => '/search/trending',
+    }),
   }),
 });
 
