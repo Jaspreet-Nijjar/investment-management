@@ -1,5 +1,5 @@
-import { SearchBar } from '../components/SearchBar/SearchBar';
 import CryptocurrencyTable from '../components/CryptocurrencyTable/CryptocurrencyTable';
+import SearchBar from '../components/SearchBar/SearchBar';
 
 const Cryptocurrencies = () => {
   return (

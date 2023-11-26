@@ -7,7 +7,7 @@ import { CryptocurrencyHeader } from './CryptocurrencyHeader';
 export default function CryptocurrencyTable() {
   const { data } = useGetCoinsQuery(1);
 
-  const searchQuery = useSelector((state) => String(state.searchBar) || '');
+  const searchQuery = useSelector((state) => state.searchBar);
 
   const [filteredData, setFilteredData] = useState([]);
 
