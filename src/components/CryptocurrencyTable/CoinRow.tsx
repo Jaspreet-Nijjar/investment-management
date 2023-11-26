@@ -1,4 +1,4 @@
-import SparkLineChart from '../../components/SparkLineChart/SparkLineChart';
+import SparkLineChart from '../SparkLineChart/SparkLineChart';
 import millify from 'millify';
 import { Link } from 'react-router-dom';
 

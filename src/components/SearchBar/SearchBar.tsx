@@ -20,7 +20,7 @@ export const SearchBar = ({ placeholder }: SearchBarProps) => {
   };
 
   return (
-    <section className="ml-60">
+    <section className="ml-20 flex rounded items-center">
       <input
         type="text"
         value={searchBar.value}
