@@ -26,4 +26,5 @@ export const {
   useGetCoinsQuery,
   useGetCoinSummaryDataQuery,
   useGetCoinHistoryQuery,
+  useGetTrendingCoinsQuery,
 } = coinGeckoApi;
