@@ -1,9 +1,17 @@
 import { useGetTrendingCoinsQuery } from '../../services/cryptoAPI';
 
 export const TrendingCoins = () => {
-  const { data } = useGetTrendingCoinsQuery(1);
+  const { data, isLoading } = useGetTrendingCoinsQuery(1);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   console.log(data);
 
-  return <div>Trending Coins</div>;
+  return (
+    <section>
+      <h2>Trending Coins</h2>
+    </section>
+  );
 };

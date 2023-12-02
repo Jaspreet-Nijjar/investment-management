@@ -1,11 +1,10 @@
-import { CoinSummaryData } from '../components/CoinSummaryData/CoinSummaryData';
+// import { CoinSummaryData } from '../components/CoinSummaryData/CoinSummaryData';
 import { TrendingCoins } from '../components/TrendingCoins/TrendingCoins';
 
 const Homepage = () => {
   return (
-    <div>
-      <p>HomePage</p>
-      <CoinSummaryData />
+    <div className="ml-60">
+      {/* <CoinSummaryData /> */}
       <TrendingCoins />
     </div>
   );
