@@ -1,5 +1,7 @@
 import { useGetTrendingCoinsQuery } from '../../services/cryptoAPI';
 import { TrendingCoinRowHeader } from './TrendingCoinRowHeader';
+import TrendingCoinRow from './TrendingCoinRow';
+import { Link } from 'react-router-dom';
 
 export const TrendingCoins = () => {
   const { data, isLoading } = useGetTrendingCoinsQuery(1);
@@ -20,6 +22,22 @@ export const TrendingCoins = () => {
         </span>{' '}
         have been the highest ranking searches in the last 3 hours.
       </p>
+      {data.coins.length > 0 ? (
+        data.coins.map((coin) => (
+          <TrendingCoinRow coin={coin.item} key={coin.item.id} />
+        ))
+      ) : (
+        <div>No trending coins available</div>
+      )}
+      <div className="text-sm text-center mt-6 border border-orange-100 rounded p-2">
+        Explore all Cryptocurrencies{' '}
+        <Link
+          className="text-orange-300 font-bold hover:text-orange-400 transition 0.5s ease-in"
+          to="/cryptocurrencies"
+        >
+          here
+        </Link>
+      </div>
     </section>
   );
 };
