@@ -4,7 +4,7 @@ import { navbar_config } from '../../config/navbar_links_config';
 
 export const Navbar = () => {
   return (
-    <nav className="bg-black h-screen fixed left-0 w-58 p-8">
+    <nav className="bg-black h-screen fixed left-0 top-0 w-58 p-8">
       <div className="logo mb-10">
         <Link to="/">
           <img src={Logo} width="150" alt="virtual portfolio main logo" />
