@@ -8,7 +8,6 @@ export const CryptocurrencyHeader = () => {
     '7d',
     'Market Cap',
     'Last 7d',
-    'Add To Portfolio',
   ];
 
   const headerClasses = [
