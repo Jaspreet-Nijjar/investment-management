@@ -14,7 +14,7 @@ export const TrendingCoins = () => {
     <section className="p-4 mt-4 mr-4 border border-gray-200 rounded md:w-96">
       <h2 className="text-center font-bold">Trending Coins</h2>
       <TrendingCoinRowHeader />
-      <p className="hidden md:block text-sm mt-2 text-center">
+      <p className="hidden md:block text-sm p-4 text-center">
         Discover the most trending cryptocurrencies today!{' '}
         <span className="font-bold">
           {data.coins[0].item.name}, {data.coins[1].item.name} and{' '}
