@@ -1,9 +1,8 @@
 import millify from 'millify';
 import DOMPurify from 'dompurify';
+import { Link } from 'react-router-dom';
 
 const CryptocurrencyInformation = ({ data }) => {
-  console.log(data);
-
   if (!data) {
     return <p>We currently cannot load the data</p>;
   }
@@ -62,6 +61,11 @@ const CryptocurrencyInformation = ({ data }) => {
           }}
           className="text-sm"
         ></p>
+      </section>
+
+      <section className="text-sm">
+        <h1 className="pt-10 text-gray-500">Further Information</h1>
+        <Link to={data.links.homepage[0]}>{data.name} Homepage</Link>
       </section>
     </main>
   );
