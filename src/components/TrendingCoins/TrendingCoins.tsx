@@ -11,7 +11,7 @@ export const TrendingCoins = () => {
   }
 
   return (
-    <section className="p-4 mt-4 mr-4 border border-gray-200 rounded md:w-96">
+    <section className="mx-auto ml-4 mt-4 mr-4 border border-gray-200 rounded md:w-96">
       <h2 className="text-center font-bold">Trending Coins</h2>
       <p className="hidden md:block text-sm p-2 text-center">
         Discover the most trending cryptocurrencies today!{' '}
