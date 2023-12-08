@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 export const TrendingCoins = () => {
   const { data, isLoading } = useGetTrendingCoinsQuery(1);
 
+  const trendingCoins = data && data.coins ? data.coins.slice(0, 5) : [];
+
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -14,17 +16,17 @@ export const TrendingCoins = () => {
     <section className="mx-auto ml-4 mt-4 mr-4 border border-gray-200 rounded md:w-96">
       <h2 className="text-center font-bold">Trending Coins</h2>
       <p className="hidden md:block text-sm p-2 text-center">
-        Discover the most trending cryptocurrencies today!{' '}
+        Discover the most trending cryptocurrencies.{' '}
         <span className="font-bold">
-          {data.coins[0].item.name}, {data.coins[1].item.name} and{' '}
-          {data.coins[2].item.name}
+          {trendingCoins[0].item.name}, {trendingCoins[1].item.name} and{' '}
+          {trendingCoins[2].item.name}
         </span>{' '}
         have been the highest ranking searches in the last 3 hours.
       </p>
       <TrendingCoinRowHeader />
 
-      {data.coins.length > 0 ? (
-        data.coins.map((coin) => (
+      {trendingCoins.length > 0 ? (
+        trendingCoins.map((coin) => (
           <TrendingCoinRow coin={coin.item} key={coin.item.id} />
         ))
       ) : (

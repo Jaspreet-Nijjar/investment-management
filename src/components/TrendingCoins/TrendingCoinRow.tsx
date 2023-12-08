@@ -25,7 +25,12 @@ const TrendingCoinRow: React.FC<TrendingCoinRowProps> = ({ coin }) => {
   return (
     <div className="text-sm grid grid-cols-2 gap-6 text-center p-2">
       <div className="flex gap-4 items-center justify-center">
-        <Link to={`/cryptocurrencies/crypto/${coin.id}`}>{coin.name}</Link>
+        <Link
+          className="hover:text-orange-500 transition ease-in 0.5s"
+          to={`/cryptocurrencies/crypto/${coin.id}`}
+        >
+          {coin.name}
+        </Link>
         <img src={coin.thumb} alt="coin thumbnail logo" />
       </div>
       ${data.market_data.current_price.usd}
