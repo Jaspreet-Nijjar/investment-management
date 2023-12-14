@@ -7,7 +7,9 @@ const RootLayout = () => {
     <div>
       <Navbar />
 
-      <Outlet />
+      <div className="overflow-y-auto h-full">
+        <Outlet />
+      </div>
 
       <Footer />
     </div>

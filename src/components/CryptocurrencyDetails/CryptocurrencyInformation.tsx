@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const CryptocurrencyInformation = ({ data }) => {
   if (!data) {
-    return <p>We currently cannot load the data</p>;
+    return null;
   }
 
   return (
