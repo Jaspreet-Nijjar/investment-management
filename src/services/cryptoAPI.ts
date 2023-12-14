@@ -22,6 +22,9 @@ export const coinGeckoApi = createApi({
     getSingleCoin: builder.query({
       query: (coinId) => `/coins/${coinId}`,
     }),
+    getCoinCategories: builder.query({
+      query: () => '/coins/categories',
+    }),
   }),
 });
 
@@ -31,4 +34,5 @@ export const {
   useGetCoinHistoryQuery,
   useGetTrendingCoinsQuery,
   useGetSingleCoinQuery,
+  useGetCoinCategoriesQuery,
 } = coinGeckoApi;
