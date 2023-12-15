@@ -7,12 +7,19 @@ const CryptocurrencyInformation = ({ data }) => {
     return null;
   }
 
+  console.log(data);
+
   return (
     <main>
       <section>
         <div className="flex items-center gap-4">
           {data && <img src={data.image.small} />}
           {data && <p className="text-xl">{data.name}</p>}
+          {data && (
+            <div className="text-sm bg-black text-white px-2 py-1 rounded">
+              Rank #{data.market_cap_rank}
+            </div>
+          )}
         </div>
         <div>
           {data && (
