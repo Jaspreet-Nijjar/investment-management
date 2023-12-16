@@ -1,4 +1,8 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import {
+  combineReducers,
+  configureStore,
+  getDefaultMiddleware,
+} from '@reduxjs/toolkit';
 import { coinGeckoApi } from '../services/cryptoAPI';
 import searchBarReducer from '../components/SearchBar/searchBarSlice';
 
@@ -11,6 +15,8 @@ export type RootState = ReturnType<typeof rootReducer>;
 
 const store = configureStore({
   reducer: rootReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(coinGeckoApi.middleware),
 });
 
 export default store;
