@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
-import { SearchBar } from '../SearchBar';
+import SearchBar from '../SearchBar';
 import { Provider } from 'react-redux';
 import store from '../../../store/store';
 

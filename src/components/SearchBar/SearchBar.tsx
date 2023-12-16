@@ -1,12 +1,13 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { searchQuery } from './searchBarSlice';
+import { RootState } from '../../store/store';
 
 interface SearchBarProps {
   placeholder: string;
 }
 
 export default function SearchBar({ placeholder }: SearchBarProps) {
-  const searchBar = useSelector((state) => state.searchBar);
+  const searchBar = useSelector((state: RootState) => state.searchBar);
   const dispatch = useDispatch();
 
   function handleSearchChange(e: React.ChangeEvent<HTMLInputElement>) {

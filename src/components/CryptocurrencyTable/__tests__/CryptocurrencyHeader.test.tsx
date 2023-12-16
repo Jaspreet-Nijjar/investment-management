@@ -15,7 +15,6 @@ describe('#CryptocurrencyHeader', () => {
       '7d',
       'Market Cap',
       'Last 7d',
-      'Add To Portfolio',
     ];
 
     headers.forEach((header) => {
@@ -36,7 +35,6 @@ describe('#CryptocurrencyHeader', () => {
       '7d',
       'Market Cap',
       'Last 7d',
-      'Add To Portfolio',
     ];
 
     const renderedHeaders = container.querySelectorAll(
@@ -69,7 +67,6 @@ describe('#CryptocurrencyHeader', () => {
           '7d',
           'Market Cap',
           'Last 7d',
-          'Add To Portfolio',
         ],
       };
 
