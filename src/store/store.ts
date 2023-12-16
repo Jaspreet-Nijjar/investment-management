@@ -1,8 +1,4 @@
-import {
-  combineReducers,
-  configureStore,
-  getDefaultMiddleware,
-} from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { coinGeckoApi } from '../services/cryptoAPI';
 import searchBarReducer from '../components/SearchBar/searchBarSlice';
 
