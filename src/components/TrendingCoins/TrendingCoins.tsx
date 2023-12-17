@@ -2,6 +2,7 @@ import { useGetTrendingCoinsQuery } from '../../services/cryptoAPI';
 import { TrendingCoinRowHeader } from './TrendingCoinRowHeader';
 import TrendingCoinRow from './TrendingCoinRow';
 import { Link } from 'react-router-dom';
+import { FadeLoader } from 'react-spinners';
 
 export const TrendingCoins = () => {
   const { data, isLoading } = useGetTrendingCoinsQuery(1);
@@ -9,7 +10,7 @@ export const TrendingCoins = () => {
   const trendingCoins = data && data.coins ? data.coins.slice(0, 5) : [];
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <FadeLoader color="#FFA500" />;
   }
 
   return (
