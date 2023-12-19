@@ -9,7 +9,7 @@ const SparkLineChart = ({ coinId }) => {
   let timestamps = '';
 
   if (!coinHistoryData) {
-    return 'Loading...';
+    return <div className="text-center">Loading...</div>;
   }
 
   if (coinHistoryData) {
@@ -36,6 +36,8 @@ const SparkLineChart = ({ coinId }) => {
   };
 
   const options = {
+    maintainAspectRatio: false,
+    responsive: true,
     plugins: {
       legend: {
         display: false,
@@ -58,7 +60,7 @@ const SparkLineChart = ({ coinId }) => {
   };
 
   return (
-    <div>
+    <div className="flex justify-center items-center">
       <div className="hidden lg:block">
         <Line data={chartData} options={options} />
       </div>

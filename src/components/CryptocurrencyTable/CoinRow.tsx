@@ -28,7 +28,7 @@ export default function CoinRow({ coin }: CoinRowProps) {
   return (
     <div>
       <section
-        className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-10 items-center gap-30 p-4 border-b border-gray-200 text-sm"
+        className="text-xs grid grid-cols-2 md:grid-cols-4 lg:grid-cols-10 items-center gap-30 p-4 border-b border-gray-200"
         key={coin.id}
       >
         <div className="hidden md:block text-center">
@@ -99,8 +99,8 @@ export default function CoinRow({ coin }: CoinRowProps) {
           ${millify(coin.market_cap)}
         </div>
 
-        <div>
-          <div className="flex justify-around text-xs">
+        <div className="col-span-2">
+          <div className="hidden md:flex justify-around text-xs">
             <p>${millify(coin.circulating_supply)}</p>
             <p>${millify(coin.total_supply)}</p>
           </div>

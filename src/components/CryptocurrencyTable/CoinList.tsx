@@ -19,7 +19,7 @@ interface CoinListProps {
 }
 
 const CoinList: React.FC<CoinListProps> = ({ data }) => (
-  <div>
+  <div className="mx-auto max-w-screen-lg">
     {data.length > 0 ? (
       data.map((coin: CoinProps) => <CoinRow key={coin.id} coin={coin} />)
     ) : (
