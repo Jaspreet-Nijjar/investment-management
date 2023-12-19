@@ -1,6 +1,6 @@
 import SparkLineChart from '../../components/SparkLineChart/SparkLineChart';
 import millify from 'millify';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { IoMdArrowDropup } from 'react-icons/io';
 import { IoMdArrowDropdown } from 'react-icons/io';
 
@@ -41,9 +41,11 @@ export default function CoinRow({ coin }: CoinRowProps) {
             width={30}
             className="mr-2"
           />
-          <p>
-            {coin.name} ({coin.symbol.toUpperCase()})
-          </p>
+          <Link to={`/cryptocurrencies/crypto/${coin.id}`}>
+            <div className="hover:text-orange-500 transition ease-in 500">
+              {coin.name} ({coin.symbol.toUpperCase()})
+            </div>
+          </Link>
         </div>
 
         <div className="text-center">${coin.current_price}</div>
@@ -116,12 +118,6 @@ export default function CoinRow({ coin }: CoinRowProps) {
         </div>
 
         <SparkLineChart coinId={coin.id} />
-        {/* <Link
-          className="hidden xl:block text-center text-orange-300 hover:text-orange-400 transition ease-in duration-300 font-bold"
-          to={`/cryptocurrencies/crypto/${coin.id}`}
-        >
-          Details
-        </Link> */}
       </section>
     </div>
   );
