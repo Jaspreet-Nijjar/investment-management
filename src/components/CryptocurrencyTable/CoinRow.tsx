@@ -1,6 +1,8 @@
 import SparkLineChart from '../../components/SparkLineChart/SparkLineChart';
 import millify from 'millify';
 import { Link } from 'react-router-dom';
+import { IoMdArrowDropup } from 'react-icons/io';
+import { IoMdArrowDropdown } from 'react-icons/io';
 
 interface CoinProps {
   id: string;
@@ -45,33 +47,48 @@ export default function CoinRow({ coin }: CoinRowProps) {
         <div className="text-center">${coin.current_price}</div>
 
         <div
-          className={`hidden lg:block text-center ${
+          className={`hidden lg:flex items-center justify-center ${
             coin.price_change_percentage_1h_in_currency < 0
               ? 'text-red-500'
               : 'text-green-500'
           }`}
         >
-          {coin.price_change_percentage_1h_in_currency.toFixed(2)}%
+          {coin.price_change_percentage_1h_in_currency > 0 ? (
+            <IoMdArrowDropup size={20} className="text-green-500" />
+          ) : (
+            <IoMdArrowDropdown size={20} className="text-red-500" />
+          )}
+          {Math.abs(coin.price_change_percentage_1h_in_currency).toFixed(1)}%
         </div>
 
         <div
-          className={`hidden lg:block text-center ${
+          className={`hidden lg:flex items-center justify-center ${
             coin.price_change_percentage_24h < 0
               ? 'text-red-500'
               : 'text-green-500'
           }`}
         >
-          {coin.price_change_percentage_24h.toFixed(2)}%
+          {coin.price_change_percentage_24h > 0 ? (
+            <IoMdArrowDropup size={20} className="text-green-500" />
+          ) : (
+            <IoMdArrowDropdown size={20} className="text-red-500" />
+          )}
+          {Math.abs(coin.price_change_percentage_24h).toFixed(1)}%
         </div>
 
         <div
-          className={`hidden lg:block text-center ${
+          className={`hidden lg:flex items-center justify-center ${
             coin.price_change_percentage_7d_in_currency < 0
               ? 'text-red-500'
               : 'text-green-500'
           }`}
         >
-          {coin.price_change_percentage_7d_in_currency.toFixed(2)}%
+          {coin.price_change_percentage_7d_in_currency > 0 ? (
+            <IoMdArrowDropup size={20} className="text-green-500" />
+          ) : (
+            <IoMdArrowDropdown size={20} className="text-red-500" />
+          )}
+          {Math.abs(coin.price_change_percentage_7d_in_currency).toFixed(1)}%
         </div>
 
         <div className="hidden md:block text-center">
