@@ -24,7 +24,7 @@ export default function CoinRow({ coin }: CoinRowProps) {
   return (
     <div>
       <section
-        className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 items-center gap-30 p-4 border-b border-gray-200 text-sm"
+        className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-10 items-center gap-30 p-4 border-b border-gray-200 text-sm"
         key={coin.id}
       >
         <div className="hidden md:block text-center">
