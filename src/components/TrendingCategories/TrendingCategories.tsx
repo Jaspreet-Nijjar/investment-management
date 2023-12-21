@@ -1,11 +1,11 @@
 import { useGetTrendingCoinsQuery } from '../../services/cryptoAPI';
-import TrendingCategoriesBarChart from './TrendingCategoriesBarChart';
+// import TrendingCategoriesBarChart from './TrendingCategoriesBarChart';
 
 const TrendingCategories = () => {
   const { data, isLoading } = useGetTrendingCoinsQuery(1);
 
   const trendingCategories = data && data.categories.slice(0, 5);
-  console.log(trendingCategories);
+  console.log('Trending Categories:', trendingCategories);
 
   if (isLoading) {
     return <div>Is Loading...</div>;
@@ -18,11 +18,11 @@ const TrendingCategories = () => {
         View the highest cryptocurrency categories currently trending based on
         market capitalisation. The top categories are{' '}
         <span className="font-bold">
-          {trendingCategories[0].name}, {trendingCategories[1].name} and{' '}
-          {trendingCategories[2].name}.
+          {trendingCategories[0]?.name}, {trendingCategories[1]?.name} and{' '}
+          {trendingCategories[2]?.name}.
         </span>
       </p>
-      <TrendingCategoriesBarChart categories={trendingCategories} />
+      {/* <TrendingCategoriesBarChart categories={trendingCategories} /> */}
     </section>
   );
 };

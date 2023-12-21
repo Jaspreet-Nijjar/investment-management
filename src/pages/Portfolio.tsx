@@ -1,9 +1,7 @@
-import LoadingSpinner from '../shared/LoadingSpinner/LoadingSpinner';
-
 const Portfolio = () => {
   return (
     <div>
-      <LoadingSpinner />
+      <h1>Portfolio</h1>
     </div>
   );
 };

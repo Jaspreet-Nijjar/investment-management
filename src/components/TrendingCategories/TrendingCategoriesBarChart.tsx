@@ -74,7 +74,11 @@ const TrendingCategoriesBarChart: React.FC<TrendingCategoriesBarChartProps> = ({
     },
     datasets: [
       {
-        data: filteredData.map((category) => category.market_cap),
+        label: 'Market Cap',
+
+        data: filteredData.map(
+          (category: CategoryProps) => category.market_cap
+        ),
         backgroundColor: 'orange',
       },
     ],

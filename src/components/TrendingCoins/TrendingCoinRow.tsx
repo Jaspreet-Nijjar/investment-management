@@ -20,7 +20,7 @@ const TrendingCoinRow: React.FC<TrendingCoinRowProps> = ({ coin }) => {
   }
 
   if (isError || !data) {
-    return <div>Error fetching data for {coin.name}</div>;
+    return <div className="text-sm">Error fetching data for {coin.name}</div>;
   }
 
   return (
