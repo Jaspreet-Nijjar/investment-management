@@ -1,5 +1,5 @@
 import { useGetTrendingCoinsQuery } from '../../services/cryptoAPI';
-// import TrendingCategoriesBarChart from './TrendingCategoriesBarChart';
+import TrendingCategoriesBarChart from './TrendingCategoriesBarChart';
 
 const TrendingCategories = () => {
   const { data, isLoading } = useGetTrendingCoinsQuery(1);
@@ -22,7 +22,7 @@ const TrendingCategories = () => {
           {trendingCategories[2]?.name}.
         </span>
       </p>
-      {/* <TrendingCategoriesBarChart categories={trendingCategories} /> */}
+      <TrendingCategoriesBarChart categories={trendingCategories} />
     </section>
   );
 };

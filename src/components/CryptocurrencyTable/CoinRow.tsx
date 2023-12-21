@@ -104,16 +104,18 @@ export default function CoinRow({ coin }: CoinRowProps) {
             <p>${millify(coin.circulating_supply)}</p>
             <p>${millify(coin.total_supply)}</p>
           </div>
-          <div className="relative w-28 h-2 bg-gray-200 rounded mx-auto">
-            <div
-              className="absolute left-0 top-0 h-full bg-orange-300 rounded"
-              style={{
-                width: `${(
-                  (coin.circulating_supply / coin.total_supply) *
-                  100
-                ).toFixed(2)}%`,
-              }}
-            ></div>
+          <div className="hidden lg:block">
+            <div className="relative w-28 h-2 bg-gray-200 rounded mx-auto">
+              <div
+                className="absolute left-0 top-0 h-full bg-orange-300 rounded"
+                style={{
+                  width: `${(
+                    (coin.circulating_supply / coin.total_supply) *
+                    100
+                  ).toFixed(2)}%`,
+                }}
+              ></div>
+            </div>
           </div>
         </div>
 
