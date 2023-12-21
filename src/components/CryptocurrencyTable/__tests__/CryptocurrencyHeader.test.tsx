@@ -14,6 +14,7 @@ describe('#CryptocurrencyHeader', () => {
       '24hr',
       '7d',
       'Market Cap',
+      'Circulating / Total Supply',
       'Last 7d',
     ];
 
@@ -34,6 +35,7 @@ describe('#CryptocurrencyHeader', () => {
       '24hr',
       '7d',
       'Market Cap',
+      'Circulating / Total Supply',
       'Last 7d',
     ];
 
@@ -56,6 +58,7 @@ describe('#CryptocurrencyHeader', () => {
           '24hr',
           '7d',
           'Market Cap',
+          'Circulating / Total Supply',
           'Last 7d',
         ],
         xl: [
@@ -66,6 +69,7 @@ describe('#CryptocurrencyHeader', () => {
           '24hr',
           '7d',
           'Market Cap',
+          'Circulating / Total Supply',
           'Last 7d',
         ],
       };
