@@ -36,16 +36,8 @@ describe('#TrendingCoinRow', () => {
     );
 
     await waitFor(async () => {
-      const errorElement = screen.queryByText(
-        /Error fetching data for Bitcoin/i
-      );
-
-      if (errorElement) {
-        expect(errorElement).toBeInTheDocument();
-      } else {
-        const bitcoinElement = await screen.findByText(/Bitcoin/i);
-        expect(bitcoinElement).toBeInTheDocument();
-      }
+      const bitcoinElement = screen.getByText(/Bitcoin/i);
+      expect(bitcoinElement).toBeInTheDocument();
     });
   });
 });
