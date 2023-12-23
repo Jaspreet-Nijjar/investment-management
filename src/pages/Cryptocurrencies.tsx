@@ -2,12 +2,14 @@ import CryptocurrencyTable from '../components/CryptocurrencyTable/Cryptocurrenc
 import SearchBar from '../components/SearchBar/SearchBar';
 import { CoinSummaryData } from '../components/CoinSummaryData/CoinSummaryData';
 import MarketCapCard from '../components/CryptocurrencyCards/MarketCapCard';
+import TradingVolumeCard from '../components/CryptocurrencyCards/TradingVolumeCard';
 
 const Cryptocurrencies = () => {
   return (
     <>
       <CoinSummaryData />
       <MarketCapCard />
+      <TradingVolumeCard />
       <main>
         <h1 className="text-center ml-24 mt-4 text-xl font-semibold md:text-2xl">
           All Cryptocurrencies

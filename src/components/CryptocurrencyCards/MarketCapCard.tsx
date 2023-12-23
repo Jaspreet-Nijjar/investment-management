@@ -16,11 +16,11 @@ const MarketCapCard = () => {
   }
 
   return (
-    <div className="ml-64 mt-4 border p-4 border-gray-200 rounded md:w-max">
+    <div className="ml-64 mt-4 border p-4 border-gray-200 rounded md:w-72">
       <h1 className="text-xl font-bold tracking-wide">
         ${formatNumber(data.data.total_market_cap.usd)}
       </h1>
-      <div className="flex justify-center items-center">
+      <div className="flex items-center">
         <p className="text-gray-500 text-md">Market Capitalisation</p>
         {data.data.market_cap_change_percentage_24h_usd > 0 ? (
           <IoMdArrowDropup size={20} className="text-green-500" />
