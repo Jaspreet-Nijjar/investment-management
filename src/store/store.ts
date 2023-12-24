@@ -7,12 +7,12 @@ const rootReducer = combineReducers({
   searchBar: searchBarReducer,
 });
 
-export type RootState = ReturnType<typeof rootReducer>;
-
 const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(coinGeckoApi.middleware),
 });
+
+export type RootState = ReturnType<typeof store.getState>;
 
 export default store;

@@ -25,7 +25,7 @@ const Cryptocurrencies = () => {
             <TradingVolumeCard />
           </section>
 
-          <section>
+          <section className="flex">
             <TrendingCoinsCard />
           </section>
         </div>
