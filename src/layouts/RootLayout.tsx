@@ -7,7 +7,7 @@ const RootLayout = () => {
     <div>
       <Navbar />
 
-      <div className="overflow-y-auto h-full">
+      <div className="lg:pl-56 lg:pt-16 md:pl-0 md:pt-16 pt-16">
         <Outlet />
       </div>
 
