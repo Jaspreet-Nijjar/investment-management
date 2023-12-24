@@ -15,7 +15,7 @@ export const CoinSummaryData = () => {
     return null;
   }
   return (
-    <section className="ml-56 overflow-hidden text-xs text-white bg-black p-2 flex justify-around">
+    <section className="overflow-hidden text-xs text-white bg-black p-2 flex justify-around">
       <div className="flex gap-1 items-center">
         <CiCoinInsert size={20} />
         <p>Coins: </p>
