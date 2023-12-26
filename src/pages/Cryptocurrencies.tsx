@@ -21,13 +21,13 @@ const Cryptocurrencies = () => {
         </p>
         {/* <SearchBar placeholder="Search Cryptocurrencies" /> */}
 
-        <div className="flex">
-          <section className="flex flex-col">
+        <div className="flex flex-col pb-8 md:flex-row px-8">
+          <section className="flex flex-col items-center justify-center px-6">
             <MarketCapCard />
             <TradingVolumeCard />
           </section>
 
-          <section className="flex">
+          <section className="flex flex-col items-center">
             <TrendingCoinsCard />
           </section>
         </div>

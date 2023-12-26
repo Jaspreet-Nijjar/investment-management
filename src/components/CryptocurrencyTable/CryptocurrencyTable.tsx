@@ -35,7 +35,7 @@ export default function CryptocurrencyTable() {
   }, [data, searchQuery]);
 
   return (
-    <div className="ml-24">
+    <div>
       <CryptocurrencyHeader />
       <CoinList data={filteredData} />
     </div>

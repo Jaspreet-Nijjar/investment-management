@@ -18,7 +18,7 @@ const TrendingCoinsCard = () => {
   }
 
   return (
-    <div className="ml-10 mt-4 border p-4 border-gray-200 rounded">
+    <div className="mt-4 border p-4 border-gray-200 rounded h-full">
       <h1 className="text-md text-center font-bold text-gray-500 mb-2">
         Trending Coins
       </h1>

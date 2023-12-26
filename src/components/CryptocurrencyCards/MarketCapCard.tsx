@@ -16,7 +16,7 @@ const MarketCapCard = () => {
   }
 
   return (
-    <div className="ml-64 mt-4 border p-4 border-gray-200 rounded md:w-72">
+    <div className="mt-4 border p-4 border-gray-200 rounded w-72">
       <h1 className="text-xl font-bold tracking-wide">
         ${formatNumber(data.data.total_market_cap.usd)}
       </h1>
