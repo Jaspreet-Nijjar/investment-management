@@ -1,5 +1,5 @@
 import CryptocurrencyTable from '../components/CryptocurrencyTable/CryptocurrencyTable';
-import SearchBar from '../components/SearchBar/SearchBar';
+// import SearchBar from '../components/SearchBar/SearchBar';
 import { CoinSummaryData } from '../components/CoinSummaryData/CoinSummaryData';
 import MarketCapCard from '../components/CryptocurrencyCards/MarketCapCard';
 import TradingVolumeCard from '../components/CryptocurrencyCards/TradingVolumeCard';
@@ -10,14 +10,16 @@ const Cryptocurrencies = () => {
     <>
       <CoinSummaryData />
 
-      <main>
-        <h1 className="text-center ml-24 mt-4 text-xl font-semibold md:text-2xl">
-          All Cryptocurrencies
+      <main className="pb-32">
+        <h1 className="text-center mt-4 text-xl font-semibold md:text-2xl">
+          Cryptocurrency Prices by Market Cap
         </h1>
-        <p className="text-center ml-24">
-          Discover and explore our full list of available cryptocurrencies
+        <p className="text-center text-sm p-2">
+          Discover all global cryptocurrencies available, highlighted from the
+          highest market cap. Click on the product name to explore further
+          details about the cryptocurrency.
         </p>
-        <SearchBar placeholder="Search Cryptocurrencies" />
+        {/* <SearchBar placeholder="Search Cryptocurrencies" /> */}
 
         <div className="flex">
           <section className="flex flex-col">
@@ -30,7 +32,6 @@ const Cryptocurrencies = () => {
           </section>
         </div>
 
-        <h1 className="ml-64 text-gray-600 py-6 font-bold">Market Overview</h1>
         <CryptocurrencyTable />
       </main>
     </>
