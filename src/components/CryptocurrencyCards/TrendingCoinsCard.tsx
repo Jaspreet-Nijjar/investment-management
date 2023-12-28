@@ -7,8 +7,6 @@ const TrendingCoinsCard = () => {
 
   const trendingCoins = data && data.coins ? data.coins.slice(0, 3) : [];
 
-  console.log(trendingCoins);
-
   if (isLoading) {
     return <LoadingSpinner />;
   }
