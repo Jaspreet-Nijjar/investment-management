@@ -1,8 +1,7 @@
 import { useGetCoinSummaryDataQuery } from '../../services/cryptoAPI';
-import LoadingSpinner from '../../shared/LoadingSpinner/LoadingSpinner';
+import LoadingSpinner from '../../shared/LoadingSpinner';
 import { formatNumber } from '../../utilities/formatNumber';
-import { IoMdArrowDropup } from 'react-icons/io';
-import { IoMdArrowDropdown } from 'react-icons/io';
+import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
 
 const MarketCapCard = () => {
   const { data, isLoading, isError } = useGetCoinSummaryDataQuery(1);

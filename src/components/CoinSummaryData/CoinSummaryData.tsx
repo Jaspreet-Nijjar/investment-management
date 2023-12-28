@@ -2,16 +2,19 @@ import { useGetCoinSummaryDataQuery } from '../../services/cryptoAPI';
 import millify from 'millify';
 import { CiCoinInsert } from 'react-icons/ci';
 import { BsCurrencyExchange } from 'react-icons/bs';
-import { IoMdArrowDropup } from 'react-icons/io';
-import { IoMdArrowDropdown } from 'react-icons/io';
+import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
 import { SiCoinmarketcap } from 'react-icons/si';
-import { FaBitcoin } from 'react-icons/fa';
-import { FaEthereum } from 'react-icons/fa';
+import { FaBitcoin, FaEthereum } from 'react-icons/fa';
+import LoadingSpinner from '../../shared/LoadingSpinner';
 
 export const CoinSummaryData = () => {
   const { data, isLoading, isError } = useGetCoinSummaryDataQuery(1);
 
-  if (isLoading || isError || !data) {
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
+  if (isError || !data) {
     return null;
   }
   return (

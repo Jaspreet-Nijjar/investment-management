@@ -1,5 +1,4 @@
-import { IoMdArrowDropup } from 'react-icons/io';
-import { IoMdArrowDropdown } from 'react-icons/io';
+import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
 
 const TrendingCoin = ({ coin }) => {
   return (

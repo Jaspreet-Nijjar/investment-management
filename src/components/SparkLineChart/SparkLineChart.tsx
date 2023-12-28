@@ -60,7 +60,7 @@ const SparkLineChart = ({ coinId }) => {
   };
 
   return (
-    <div className="flex justify-center items-center">
+    <div>
       <div className="hidden lg:block">
         <Line data={chartData} options={options} />
       </div>

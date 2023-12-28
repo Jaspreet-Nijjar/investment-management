@@ -1,8 +1,7 @@
 import SparkLineChart from '../../components/SparkLineChart/SparkLineChart';
 import millify from 'millify';
 import { Link } from 'react-router-dom';
-import { IoMdArrowDropup } from 'react-icons/io';
-import { IoMdArrowDropdown } from 'react-icons/io';
+import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
 
 interface CoinProps {
   id: string;
