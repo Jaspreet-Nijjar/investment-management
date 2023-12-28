@@ -4,6 +4,7 @@ import { CoinSummaryData } from '../components/CoinSummaryData/CoinSummaryData';
 import MarketCapCard from '../components/CryptocurrencyCards/MarketCapCard';
 import TradingVolumeCard from '../components/CryptocurrencyCards/TradingVolumeCard';
 import TrendingCoinsCard from '../components/CryptocurrencyCards/TrendingCoinsCard';
+import CryptocurrencyFilters from '../components/CryptocurrencyFilters/CryptocurrencyFilters';
 
 const Cryptocurrencies = () => {
   return (
@@ -21,14 +22,18 @@ const Cryptocurrencies = () => {
         </p>
         {/* <SearchBar placeholder="Search Cryptocurrencies" /> */}
 
-        <div className="flex flex-col pb-8 md:flex-row px-8">
-          <section className="flex flex-col items-center justify-center px-6">
+        <div className="flex flex-col pb-8 justify-center gap-6 md:flex-row px-8">
+          <section className="flex flex-col items-center justify-center">
             <MarketCapCard />
             <TradingVolumeCard />
           </section>
 
           <section className="flex flex-col items-center">
             <TrendingCoinsCard />
+          </section>
+
+          <section className="flex flex-col items-center">
+            <CryptocurrencyFilters />
           </section>
         </div>
 
