@@ -16,13 +16,13 @@ const Cryptocurrencies = () => {
         <h1 className="text-center mt-4 text-xl font-semibold md:text-2xl">
           Cryptocurrency Prices by Market Cap
         </h1>
-        <p className="text-center text-sm p-2">
+        <p className="text-center text-sm p-4">
           Discover all global cryptocurrencies available, highlighted from the
           highest market cap. Click on the product name to explore further
           details about the cryptocurrency.
         </p>
 
-        <div className="flex flex-col pb-8 justify-center gap-6 md:flex-row px-8">
+        <div className="flex flex-col pb-8 justify-center gap-6 xl:flex-row px-8">
           <section className="flex flex-col items-center justify-center">
             <MarketCapCard />
             <TradingVolumeCard />
