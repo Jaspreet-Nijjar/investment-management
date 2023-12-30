@@ -2,10 +2,10 @@ import { useGetCoinSummaryDataQuery } from '../../services/cryptoAPI';
 import millify from 'millify';
 import { CiCoinInsert } from 'react-icons/ci';
 import { BsCurrencyExchange } from 'react-icons/bs';
-import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
 import { SiCoinmarketcap } from 'react-icons/si';
 import { FaBitcoin, FaEthereum } from 'react-icons/fa';
 import LoadingSpinner from '../../shared/LoadingSpinner';
+import Indicators from '../../shared/Indicators';
 
 export const CoinSummaryData = () => {
   const { data, isLoading, isError } = useGetCoinSummaryDataQuery(1);
@@ -39,27 +39,7 @@ export const CoinSummaryData = () => {
         <p className="text-orange-400 items-center">
           ${millify(data.data.total_market_cap.usd)}
         </p>
-        {data.data.market_cap_change_percentage_24h_usd > 0 ? (
-          <>
-            <IoMdArrowDropup size={20} color="#66FF99" />
-            <p className="text-green-400">
-              {Math.abs(data.data.market_cap_change_percentage_24h_usd).toFixed(
-                1
-              )}
-              %
-            </p>
-          </>
-        ) : (
-          <>
-            <IoMdArrowDropdown size={20} color="#ff0000" />
-            <p className="text-red-400">
-              {Math.abs(data.data.market_cap_change_percentage_24h_usd).toFixed(
-                1
-              )}
-              %
-            </p>
-          </>
-        )}
+        <Indicators data={data.data.market_cap_change_percentage_24h_usd} />
       </div>
 
       <div className="hidden md:flex gap-1 items-center">
