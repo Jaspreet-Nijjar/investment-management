@@ -1,6 +1,21 @@
-import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
+import Indicators from '../../shared/Indicators';
 
-const TrendingCoin = ({ coin }) => {
+interface CoinProps {
+  coin: {
+    item: {
+      thumb: string;
+      name: string;
+      data: {
+        price: number;
+        price_change_percentage_24h: {
+          usd: number;
+        };
+      };
+    };
+  };
+}
+
+const TrendingCoin = ({ coin }: CoinProps) => {
   return (
     <>
       <div className="grid grid-cols-2 items-center justify-center">
@@ -13,23 +28,7 @@ const TrendingCoin = ({ coin }) => {
           <p className="text-sm col-span-2">{coin.item.data.price}</p>
 
           <div className="flex items-center">
-            {coin.item.data.price_change_percentage_24h.usd > 0 ? (
-              <IoMdArrowDropup size={20} className="text-green-500" />
-            ) : (
-              <IoMdArrowDropdown size={20} className="text-red-500" />
-            )}
-            <p
-              className={`text-sm font-bold ${
-                coin.item.data.price_change_percentage_24h.usd > 0
-                  ? 'text-green-500'
-                  : 'text-red-500'
-              }`}
-            >
-              {Math.abs(
-                coin.item.data.price_change_percentage_24h.usd.toFixed(1)
-              )}
-              %
-            </p>
+            <Indicators data={coin.item.data.price_change_percentage_24h.usd} />
           </div>
         </div>
       </div>
