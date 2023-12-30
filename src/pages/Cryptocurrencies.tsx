@@ -1,10 +1,11 @@
 import CryptocurrencyTable from '../components/CryptocurrencyTable/CryptocurrencyTable';
-// import SearchBar from '../components/SearchBar/SearchBar';
+import SearchBar from '../components/SearchBar/SearchBar';
 import { CoinSummaryData } from '../components/CoinSummaryData/CoinSummaryData';
 import MarketCapCard from '../components/CryptocurrencyCards/MarketCapCard';
 import TradingVolumeCard from '../components/CryptocurrencyCards/TradingVolumeCard';
 import TrendingCoinsCard from '../components/CryptocurrencyCards/TrendingCoinsCard';
 import CryptocurrencyFilters from '../components/CryptocurrencyFilters/CryptocurrencyFilters';
+import Button from '../shared/Button';
 
 const Cryptocurrencies = () => {
   return (
@@ -20,7 +21,6 @@ const Cryptocurrencies = () => {
           highest market cap. Click on the product name to explore further
           details about the cryptocurrency.
         </p>
-        {/* <SearchBar placeholder="Search Cryptocurrencies" /> */}
 
         <div className="flex flex-col pb-8 justify-center gap-6 md:flex-row px-8">
           <section className="flex flex-col items-center justify-center">
@@ -35,6 +35,12 @@ const Cryptocurrencies = () => {
           <section className="flex flex-col items-center">
             <CryptocurrencyFilters />
           </section>
+        </div>
+
+        <div className="flex flex-col items-center justify-center gap-2 mb-10 md:flex-row">
+          <SearchBar placeholder="Search Cryptocurrencies" />
+          <Button to="/portfolio">Portfolio</Button>
+          <Button to="/portfolio">Buy Cryptocurrency</Button>
         </div>
 
         <CryptocurrencyTable />

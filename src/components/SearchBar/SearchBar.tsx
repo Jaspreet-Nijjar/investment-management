@@ -15,13 +15,13 @@ export default function SearchBar({ placeholder }: SearchBarProps) {
   }
 
   return (
-    <section className="flex rounded items-center ml-24">
+    <section className="flex rounded items-center">
       <input
         type="text"
         value={searchBar}
         onChange={handleSearchChange}
         placeholder={placeholder}
-        className="mx-auto focus:outline-orange-300 border border-gray-300 rounded w-30 mt-2 md:w-72"
+        className="mx-auto focus:outline-orange-300 border border-gray-300 rounded w-30 md:w-72"
       />
     </section>
   );
