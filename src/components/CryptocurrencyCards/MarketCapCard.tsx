@@ -1,7 +1,7 @@
 import { useGetCoinSummaryDataQuery } from '../../services/cryptoAPI';
+import Indicators from '../../shared/Indicators';
 import LoadingSpinner from '../../shared/LoadingSpinner';
 import { formatNumber } from '../../utilities/formatNumber';
-import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
 
 const MarketCapCard = () => {
   const { data, isLoading, isError } = useGetCoinSummaryDataQuery(1);
@@ -21,20 +21,7 @@ const MarketCapCard = () => {
       </h1>
       <div className="flex items-center">
         <p className="text-gray-500 text-md">Market Capitalisation</p>
-        {data.data.market_cap_change_percentage_24h_usd > 0 ? (
-          <IoMdArrowDropup size={20} className="text-green-500" />
-        ) : (
-          <IoMdArrowDropdown size={20} className="text-red-500" />
-        )}
-        <p
-          className={`text-sm font-bold ${
-            data.data.market_cap_change_percentage_24h_usd > 0
-              ? 'text-green-500'
-              : 'text-red-500'
-          }`}
-        >
-          {data.data.market_cap_change_percentage_24h_usd.toFixed(1)}%
-        </p>
+        <Indicators data={data.data.market_cap_change_percentage_24h_usd} />
       </div>
     </div>
   );
