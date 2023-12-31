@@ -4,7 +4,7 @@ import searchBarReducer from '../components/SearchBar/searchBarSlice';
 import cryptocurrencyFilterReducer from '../components/CryptocurrencyFilters/cryptocurrencyFilterSlice';
 
 const rootReducer = combineReducers({
-  [coinGeckoApi.reducerPath]: coinGeckoApi.reducer,
+  coinGeckoApi: coinGeckoApi.reducer,
   searchBar: searchBarReducer,
   cryptocurrencyFilter: cryptocurrencyFilterReducer,
 });

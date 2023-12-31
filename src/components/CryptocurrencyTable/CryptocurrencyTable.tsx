@@ -3,11 +3,12 @@ import { useGetCoinsQuery } from '../../services/cryptoAPI';
 import CoinList from './CoinList';
 import { useSelector } from 'react-redux';
 import { CryptocurrencyHeader } from './CryptocurrencyHeader';
+import { RootState } from '../../store/store';
 
 export default function CryptocurrencyTable() {
   const { data } = useGetCoinsQuery(1);
 
-  const searchQuery = useSelector((state) => state.searchBar);
+  const searchQuery = useSelector((state: RootState) => state.searchBar);
 
   const [filteredData, setFilteredData] = useState([]);
 
