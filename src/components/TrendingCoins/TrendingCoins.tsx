@@ -28,10 +28,10 @@ export const TrendingCoins = () => {
   }
 
   return (
-    <main className="mt-8 mx-auto">
-      <section className="border border-gray-200 rounded md:w-96">
+    <main className="mt-8 mx-auto w-96 border border-green-600">
+      <section className="border border-gray-200 rounded">
         <h2 className="text-center font-bold">Trending Coins</h2>
-        <p className="hidden md:block text-sm p-2 text-center">
+        <p className="text-sm p-2 text-center">
           Discover the most trending cryptocurrencies.{' '}
           <span className="font-bold">
             {trendingCoins[0].item.name}, {trendingCoins[1].item.name} and{' '}

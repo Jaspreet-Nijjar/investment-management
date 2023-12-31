@@ -2,7 +2,7 @@ import { Bar } from 'react-chartjs-2';
 import 'chart.js/auto';
 import { useGetCoinCategoriesQuery } from '../../services/cryptoAPI';
 import millify from 'millify';
-import { FadeLoader } from 'react-spinners';
+import LoadingSpinner from '../../shared/LoadingSpinner';
 
 interface CategoryProps {
   name: string;
@@ -18,14 +18,8 @@ const TrendingCategoriesBarChart: React.FC<TrendingCategoriesBarChartProps> = ({
 }) => {
   const { data: categoryData, isLoading } = useGetCoinCategoriesQuery(1);
 
-  if (!categoryData) {
-    return <div>Loading...</div>;
-  }
-
   if (isLoading) {
-    <div className="flex justify-center align-center">
-      <FadeLoader color="#FFA500" />
-    </div>;
+    <LoadingSpinner />;
   }
 
   const normalisedCategories = categories.map((category: CategoryProps) =>
