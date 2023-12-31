@@ -3,18 +3,32 @@ import { TrendingCoinRowHeader } from './TrendingCoinRowHeader';
 import TrendingCoinRow from './TrendingCoinRow';
 import { Link } from 'react-router-dom';
 import { FadeLoader } from 'react-spinners';
+import ErrorState from '../../shared/ErrorState';
 
 export const TrendingCoins = () => {
-  const { data, isLoading } = useGetTrendingCoinsQuery(1);
-
-  const trendingCoins = data && data.coins ? data.coins.slice(0, 5) : [];
+  const { data, isLoading, isError } = useGetTrendingCoinsQuery(1);
 
   if (isLoading) {
     return <FadeLoader color="#FFA500" />;
   }
 
+  if (isError) {
+    return <ErrorState />;
+  }
+
+  const trendingCoins = data && data.coins ? data.coins.slice(0, 5) : [];
+
+  interface CoinProps {
+    item: {
+      id: number;
+      name: string;
+      thumb: string;
+      current_price: number;
+    };
+  }
+
   return (
-    <main className="mt-4 mx-auto w-90">
+    <main className="mt-8 mx-auto">
       <section className="border border-gray-200 rounded md:w-96">
         <h2 className="text-center font-bold">Trending Coins</h2>
         <p className="hidden md:block text-sm p-2 text-center">
@@ -28,7 +42,7 @@ export const TrendingCoins = () => {
         <TrendingCoinRowHeader />
 
         {trendingCoins.length > 0 ? (
-          trendingCoins.map((coin) => (
+          trendingCoins.map((coin: CoinProps) => (
             <TrendingCoinRow coin={coin.item} key={coin.item.id} />
           ))
         ) : (

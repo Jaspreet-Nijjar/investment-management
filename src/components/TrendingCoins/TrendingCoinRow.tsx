@@ -1,7 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { useGetSingleCoinQuery } from '../../services/cryptoAPI';
 import LoadingSpinner from '../../shared/LoadingSpinner';
+import ErrorState from '../../shared/ErrorState';
 
 interface TrendingCoinRowProps {
   coin: {
@@ -20,7 +20,7 @@ const TrendingCoinRow: React.FC<TrendingCoinRowProps> = ({ coin }) => {
   }
 
   if (isError || !data) {
-    return <div className="text-sm">Error fetching data for {coin.name}</div>;
+    return <ErrorState />;
   }
 
   return (

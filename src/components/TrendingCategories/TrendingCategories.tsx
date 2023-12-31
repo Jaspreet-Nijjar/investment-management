@@ -12,7 +12,7 @@ const TrendingCategories = () => {
   }
 
   return (
-    <section className="mx-auto ml-4 mt-4 mr-4 border border-gray-200 rounded md:w-96">
+    <section className="mx-auto border border-gray-200 rounded md:w-96">
       <h2 className="text-center font-bold">Trending Categories</h2>
       <p className="hidden md:block text-sm pt-2 text-center pb-6">
         View the highest cryptocurrency categories currently trending based on
