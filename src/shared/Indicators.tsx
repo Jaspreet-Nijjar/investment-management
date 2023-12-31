@@ -2,11 +2,12 @@ import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
 
 interface IndicatorProps {
   data: number;
+  fontSize: string;
 }
 
-const Indicators: React.FC<IndicatorProps> = ({ data }) => {
+const Indicators: React.FC<IndicatorProps> = ({ data, fontSize }) => {
   return (
-    <div className="flex items-center text-sm">
+    <div className={`flex items-center justify-center text-sm ${fontSize}`}>
       {data > 0 ? (
         <>
           <IoMdArrowDropup size={20} className="text-green-500" />

@@ -1,29 +1,27 @@
 import SparkLineChart from '../../components/SparkLineChart/SparkLineChart';
 import millify from 'millify';
 import { Link } from 'react-router-dom';
-import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
+import Indicators from '../../shared/Indicators';
 
 interface CoinProps {
-  id: string;
-  name: string;
-  symbol: string;
-  image: string;
-  current_price: number;
-  market_cap: number;
-  market_cap_change_percentage_24h: number;
-  market_cap_rank: number;
-  price_change_percentage_24h: number;
-  price_change_percentage_1h_in_currency: number;
-  price_change_percentage_7d_in_currency: number;
-  circulating_supply: number;
-  total_supply: number;
+  coin: {
+    id: string;
+    name: string;
+    symbol: string;
+    image: string;
+    current_price: number;
+    market_cap: number;
+    market_cap_change_percentage_24h: number;
+    market_cap_rank: number;
+    price_change_percentage_24h: number;
+    price_change_percentage_1h_in_currency: number;
+    price_change_percentage_7d_in_currency: number;
+    circulating_supply: number;
+    total_supply: number;
+  };
 }
 
-interface CoinRowProps {
-  coin: CoinProps;
-}
-
-export default function CoinRow({ coin }: CoinRowProps) {
+export default function CoinRow({ coin }: CoinProps) {
   return (
     <div>
       <section
@@ -33,6 +31,7 @@ export default function CoinRow({ coin }: CoinRowProps) {
         <div className="hidden md:block text-center">
           {coin.market_cap_rank}
         </div>
+
         <div className="flex items-center justify-center">
           <img
             src={coin.image}
@@ -49,50 +48,18 @@ export default function CoinRow({ coin }: CoinRowProps) {
 
         <div className="text-center">${coin.current_price}</div>
 
-        <div
-          className={`hidden lg:flex items-center justify-center ${
-            coin.price_change_percentage_1h_in_currency < 0
-              ? 'text-red-500'
-              : 'text-green-500'
-          }`}
-        >
-          {coin.price_change_percentage_1h_in_currency > 0 ? (
-            <IoMdArrowDropup size={20} className="text-green-500" />
-          ) : (
-            <IoMdArrowDropdown size={20} className="text-red-500" />
-          )}
-          {Math.abs(coin.price_change_percentage_1h_in_currency).toFixed(1)}%
-        </div>
-
-        <div
-          className={`hidden lg:flex items-center justify-center ${
-            coin.price_change_percentage_24h < 0
-              ? 'text-red-500'
-              : 'text-green-500'
-          }`}
-        >
-          {coin.price_change_percentage_24h > 0 ? (
-            <IoMdArrowDropup size={20} className="text-green-500" />
-          ) : (
-            <IoMdArrowDropdown size={20} className="text-red-500" />
-          )}
-          {Math.abs(coin.price_change_percentage_24h).toFixed(1)}%
-        </div>
-
-        <div
-          className={`hidden lg:flex items-center justify-center ${
-            coin.price_change_percentage_7d_in_currency < 0
-              ? 'text-red-500'
-              : 'text-green-500'
-          }`}
-        >
-          {coin.price_change_percentage_7d_in_currency > 0 ? (
-            <IoMdArrowDropup size={20} className="text-green-500" />
-          ) : (
-            <IoMdArrowDropdown size={20} className="text-red-500" />
-          )}
-          {Math.abs(coin.price_change_percentage_7d_in_currency).toFixed(1)}%
-        </div>
+        <Indicators
+          data={coin.price_change_percentage_1h_in_currency}
+          fontSize="text-xs"
+        />
+        <Indicators
+          data={coin.price_change_percentage_24h}
+          fontSize="text-xs"
+        />
+        <Indicators
+          data={coin.price_change_percentage_7d_in_currency}
+          fontSize="text-xs"
+        />
 
         <div className="hidden md:block text-center">
           ${millify(coin.market_cap)}

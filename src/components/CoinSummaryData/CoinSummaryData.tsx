@@ -39,7 +39,10 @@ export const CoinSummaryData = () => {
         <p className="text-orange-400 items-center">
           ${millify(data.data.total_market_cap.usd)}
         </p>
-        <Indicators data={data.data.market_cap_change_percentage_24h_usd} />
+        <Indicators
+          data={data.data.market_cap_change_percentage_24h_usd}
+          fontSize="text-xs"
+        />
       </div>
 
       <div className="hidden md:flex gap-1 items-center">
