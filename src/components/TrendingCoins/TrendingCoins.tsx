@@ -28,7 +28,7 @@ export const TrendingCoins = () => {
   }
 
   return (
-    <main className="mt-8 mx-auto w-96 border border-green-600">
+    <main className="mt-8 mx-auto w-96">
       <section className="border border-gray-200 rounded">
         <h2 className="text-center font-bold">Trending Coins</h2>
         <p className="text-sm p-2 text-center">
