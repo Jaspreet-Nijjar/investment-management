@@ -5,9 +5,16 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import './App.css';
-import { Homepage, News, Portfolio, Stocks, Cryptocurrencies } from './pages';
+import {
+  Homepage,
+  News,
+  Portfolio,
+  Stocks,
+  Cryptocurrencies,
+  SingleCryptoDetailsPage,
+  BuyCryptocurrencies,
+} from './pages';
 import RootLayout from './layouts/RootLayout';
-import SingleCryptoDetailsPage from './pages/SingleCryptoDetailsPage';
 
 function App() {
   const router = createBrowserRouter(
@@ -21,6 +28,10 @@ function App() {
           <Route
             path={'/cryptocurrencies/crypto/:id'}
             element={<SingleCryptoDetailsPage />}
+          />
+          <Route
+            path={'cryptocurrencies/crypto/buy'}
+            element={<BuyCryptocurrencies />}
           />
           <Route path="/news" element={<News />} />
         </Route>

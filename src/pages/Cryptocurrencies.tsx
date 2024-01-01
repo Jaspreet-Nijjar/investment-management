@@ -16,7 +16,7 @@ const Cryptocurrencies = () => {
         <h1 className="text-center mt-4 text-xl font-semibold md:text-2xl">
           Cryptocurrency Prices by Market Cap
         </h1>
-        <p className="text-center text-sm p-4">
+        <p className="text-center text-sm px-8">
           Discover all global cryptocurrencies available, highlighted from the
           highest market cap. Click on the product name to explore further
           details about the cryptocurrency.
