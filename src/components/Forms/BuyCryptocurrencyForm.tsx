@@ -1,10 +1,14 @@
+import { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useGetCoinsQuery } from '../../services/cryptoAPI';
 import LoadingSpinner from '../../shared/LoadingSpinner';
+import Button from '../../shared/Button';
 
 const BuyCryptocurrencyForm = () => {
+  const [showPortfolioButton, setShowPortfolioButton] = useState(false);
+
   const { data, isLoading } = useGetCoinsQuery(1);
 
   if (isLoading) {
@@ -20,6 +24,7 @@ const BuyCryptocurrencyForm = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    setShowPortfolioButton(true);
   };
 
   const {
@@ -69,6 +74,17 @@ const BuyCryptocurrencyForm = () => {
             </>
           )}
         />
+
+        <div className="flex flex-col gap-4 mt-16">
+          <div className="flex gap-4 justify-center">
+            <Button type="submit">Add To Portfolio</Button>
+            {showPortfolioButton && (
+              <Button to="/portfolio">Visit Portfolio</Button>
+            )}
+          </div>
+
+          <Button to="/cryptocurrencies">View All Cryptocurrencies</Button>
+        </div>
       </form>
     </div>
   );
