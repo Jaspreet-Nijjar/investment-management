@@ -1,7 +1,7 @@
 import { render, waitFor, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import TrendingVolumeCard from '../TrendingVolumeCard';
 import * as numeral from 'numeral';
+import TradingVolumeCard from '../TradingVolumeCard';
 
 jest.mock('../../../services/cryptoAPI', () => ({
   useGetCoinSummaryDataQuery: jest.fn(() => ({
@@ -23,7 +23,7 @@ jest.mock('../../../utilities/formatNumber', () => ({
 
 describe('#TrendingVolumeCard', () => {
   it('renders the volume data when it is available', async () => {
-    render(<TrendingVolumeCard />);
+    render(<TradingVolumeCard />);
 
     await waitFor(() => {
       expect(screen.getByText('$123,456,789')).toBeInTheDocument();
