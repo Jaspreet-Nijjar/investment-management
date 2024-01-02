@@ -2,7 +2,7 @@ import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
 
 interface IndicatorProps {
   data: number;
-  fontSize: string;
+  fontSize?: string;
 }
 
 const Indicators: React.FC<IndicatorProps> = ({ data, fontSize }) => {
