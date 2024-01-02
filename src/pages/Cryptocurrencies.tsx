@@ -2,7 +2,7 @@ import CryptocurrencyTable from '../components/CryptocurrencyTable/Cryptocurrenc
 import SearchBar from '../components/SearchBar/SearchBar';
 import { CoinSummaryData } from '../components/CoinSummaryData/CoinSummaryData';
 import MarketCapCard from '../components/CryptocurrencyCards/MarketCapCard';
-import TradingVolumeCard from '../components/CryptocurrencyCards/TradingVolumeCard';
+import TrendingVolumeCard from '../components/CryptocurrencyCards/TrendingVolumeCard';
 import TrendingCoinsCard from '../components/CryptocurrencyCards/TrendingCoinsCard';
 import CryptocurrencyFilters from '../components/CryptocurrencyFilters/CryptocurrencyFilters';
 import Button from '../shared/Button';
@@ -25,7 +25,7 @@ const Cryptocurrencies = () => {
         <div className="flex flex-col pb-8 justify-center gap-6 xl:flex-row px-8">
           <section className="flex flex-col items-center justify-center">
             <MarketCapCard />
-            <TradingVolumeCard />
+            <TrendingVolumeCard />
           </section>
 
           <section className="flex flex-col items-center">

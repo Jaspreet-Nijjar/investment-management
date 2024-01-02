@@ -2,7 +2,7 @@ import { useGetCoinSummaryDataQuery } from '../../services/cryptoAPI';
 import LoadingSpinner from '../../shared/LoadingSpinner';
 import { formatNumber } from '../../utilities/formatNumber';
 
-const TradingVolumeCard = () => {
+const TrendingVolumeCard = () => {
   const { data, isLoading, isError } = useGetCoinSummaryDataQuery(1);
 
   if (isLoading) {
@@ -23,4 +23,4 @@ const TradingVolumeCard = () => {
   );
 };
 
-export default TradingVolumeCard;
+export default TrendingVolumeCard;
