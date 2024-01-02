@@ -18,6 +18,15 @@ const BuyCryptocurrencyForm = () => {
       .min(1, { message: 'You must purchase at least one unit' }),
   });
 
+  const {
+    control,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(BuyCryptoFormSchema),
+  });
+
   return <div>Form</div>;
 };
 
