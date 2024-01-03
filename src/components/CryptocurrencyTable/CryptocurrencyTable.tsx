@@ -12,6 +12,8 @@ export default function CryptocurrencyTable() {
 
   const [filteredData, setFilteredData] = useState([]);
 
+  //Change to CoinData - from the types file
+
   interface CoinProps {
     id: string;
     name: string;
