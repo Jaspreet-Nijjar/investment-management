@@ -4,6 +4,7 @@ import CoinList from './CoinList';
 import { useSelector } from 'react-redux';
 import { CryptocurrencyHeader } from './CryptocurrencyHeader';
 import { RootState } from '../../store/store';
+import { CoinData } from './types';
 
 export default function CryptocurrencyTable() {
   const { data } = useGetCoinsQuery(1);
@@ -12,25 +13,13 @@ export default function CryptocurrencyTable() {
 
   const [filteredData, setFilteredData] = useState([]);
 
-  //Change to CoinData - from the types file
-
-  interface CoinProps {
-    id: string;
-    name: string;
-    symbol: string;
-    image: string;
-    current_price: number;
-    market_cap: number;
-    market_cap_change_percentage_24h: number;
-    market_cap_rank: number;
-    price_change_percentage_24h: number;
-    price_change_percentage_1h_in_currency: number;
-    price_change_percentage_7d_in_currency: number;
+  interface CoinListProps {
+    data: CoinData[];
   }
 
   useEffect(() => {
     if (data) {
-      const filtered = data.filter((coin: CoinProps) =>
+      const filtered = data.filter((coin: CoinData) =>
         coin.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
       setFilteredData(filtered);

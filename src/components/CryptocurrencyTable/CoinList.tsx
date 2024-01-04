@@ -1,8 +1,6 @@
 import CoinRow from './CoinRow';
 import { CoinData } from './types';
 
-//make a generic type and then export it
-
 interface CoinListProps {
   data: CoinData[];
 }
