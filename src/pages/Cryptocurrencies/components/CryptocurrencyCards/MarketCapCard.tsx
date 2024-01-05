@@ -1,6 +1,6 @@
 import { useGetCoinSummaryDataQuery } from '../../services/cryptoAPI';
-import Indicators from '../../shared/Indicators';
-import LoadingSpinner from '../../shared/LoadingSpinner';
+import Indicators from '../../common/Indicators';
+import LoadingSpinner from '../../common/LoadingSpinner';
 import { formatNumber } from '../../utilities/formatNumber';
 
 const MarketCapCard = () => {

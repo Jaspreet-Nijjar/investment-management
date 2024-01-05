@@ -1,5 +1,5 @@
 import { useGetCoinSummaryDataQuery } from '../../services/cryptoAPI';
-import LoadingSpinner from '../../shared/LoadingSpinner';
+import LoadingSpinner from '../../common/LoadingSpinner';
 import { formatNumber } from '../../utilities/formatNumber';
 
 const TradingVolumeCard = () => {

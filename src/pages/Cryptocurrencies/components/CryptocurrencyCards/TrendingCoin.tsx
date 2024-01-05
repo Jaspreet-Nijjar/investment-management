@@ -1,4 +1,4 @@
-import Indicators from '../../shared/Indicators';
+import Indicators from '../../common/Indicators';
 
 interface CoinProps {
   coin: {

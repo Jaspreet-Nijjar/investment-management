@@ -4,8 +4,8 @@ import { CiCoinInsert } from 'react-icons/ci';
 import { BsCurrencyExchange } from 'react-icons/bs';
 import { SiCoinmarketcap } from 'react-icons/si';
 import { FaBitcoin, FaEthereum } from 'react-icons/fa';
-import LoadingSpinner from '../../shared/LoadingSpinner';
-import Indicators from '../../shared/Indicators';
+import LoadingSpinner from '../../common/LoadingSpinner';
+import Indicators from '../../common/Indicators';
 
 export const CoinSummaryData = () => {
   const { data, isLoading, isError } = useGetCoinSummaryDataQuery(1);

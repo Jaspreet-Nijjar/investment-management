@@ -3,7 +3,7 @@ import { TrendingCoinRowHeader } from './TrendingCoinRowHeader';
 import TrendingCoinRow from './TrendingCoinRow';
 import { Link } from 'react-router-dom';
 import { FadeLoader } from 'react-spinners';
-import ErrorState from '../../shared/ErrorState';
+import ErrorState from '../../common/ErrorState';
 
 export const TrendingCoins = () => {
   const { data, isLoading, isError } = useGetTrendingCoinsQuery(1);

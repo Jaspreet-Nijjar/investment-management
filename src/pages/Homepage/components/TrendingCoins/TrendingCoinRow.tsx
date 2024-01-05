@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useGetSingleCoinQuery } from '../../services/cryptoAPI';
-import LoadingSpinner from '../../shared/LoadingSpinner';
-import ErrorState from '../../shared/ErrorState';
+import LoadingSpinner from '../../common/LoadingSpinner';
+import ErrorState from '../../common/ErrorState';
 
 interface TrendingCoinRowProps {
   coin: {

@@ -1,5 +1,5 @@
 import { useGetTrendingCoinsQuery } from '../../services/cryptoAPI';
-import ErrorState from '../../shared/ErrorState';
+import ErrorState from '../../common/ErrorState';
 import TrendingCategoriesBarChart from './TrendingCategoriesBarChart';
 
 const TrendingCategories = () => {

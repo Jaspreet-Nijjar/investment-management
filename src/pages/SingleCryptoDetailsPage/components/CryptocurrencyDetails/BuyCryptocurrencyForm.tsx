@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import Button from '../../shared/Button';
+import Button from '../../common/Button';
 
 const BuyCryptocurrencyForm = ({ data }) => {
   const [showPortfolioButton, setShowPortfolioButton] = useState(false);

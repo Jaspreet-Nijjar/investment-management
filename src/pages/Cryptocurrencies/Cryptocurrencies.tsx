@@ -5,7 +5,7 @@ import MarketCapCard from '../components/CryptocurrencyCards/MarketCapCard';
 import TradingVolumeCard from '../components/CryptocurrencyCards/TradingVolumeCard';
 import TrendingCoinsCard from '../components/CryptocurrencyCards/TrendingCoinsCard';
 import CryptocurrencyFilters from '../components/CryptocurrencyFilters/CryptocurrencyFilters';
-import Button from '../shared/Button';
+import Button from '../common/Button';
 
 const Cryptocurrencies = () => {
   return (
