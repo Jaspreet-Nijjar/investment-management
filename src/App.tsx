@@ -12,7 +12,6 @@ import {
   Stocks,
   Cryptocurrencies,
   SingleCryptoDetailsPage,
-  BuyCryptocurrencies,
 } from './pages';
 import RootLayout from './layouts/RootLayout';
 
@@ -29,10 +28,7 @@ function App() {
             path={'/cryptocurrencies/crypto/:id'}
             element={<SingleCryptoDetailsPage />}
           />
-          <Route
-            path={'cryptocurrencies/crypto/buy'}
-            element={<BuyCryptocurrencies />}
-          />
+
           <Route path="/news" element={<News />} />
         </Route>
       </>

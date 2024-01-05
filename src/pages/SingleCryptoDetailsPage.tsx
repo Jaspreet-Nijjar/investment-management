@@ -5,7 +5,7 @@ const SingleCryptoDetailsPage = () => {
   const { id } = useParams();
 
   return (
-    <div className="ml-60 p-6">
+    <div className="p-8">
       <CryptocurrencyDetails id={id} />
     </div>
   );
