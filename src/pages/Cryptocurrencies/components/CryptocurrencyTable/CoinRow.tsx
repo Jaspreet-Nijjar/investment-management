@@ -3,6 +3,7 @@ import millify from 'millify';
 import { Link } from 'react-router-dom';
 import Indicators from '../../../../components/common/Indicators';
 import { formatNumber } from '../../../../utilities/formatNumber';
+import Button from '../../../../components/common/Button';
 
 interface CoinProps {
   coin: {
@@ -26,7 +27,7 @@ export default function CoinRow({ coin }: CoinProps) {
   return (
     <div>
       <section
-        className="text-xs grid grid-cols-2 md:grid-cols-4 lg:grid-cols-10 items-center gap-30 p-4 border-b border-gray-200"
+        className="text-xs grid grid-cols-3 md:grid-cols-5 lg:grid-cols-11 items-center gap-30 p-4 border-b border-gray-200"
         key={coin.id}
       >
         <div className="hidden md:block text-center">
@@ -45,6 +46,10 @@ export default function CoinRow({ coin }: CoinProps) {
               {coin.name} ({coin.symbol.toUpperCase()})
             </div>
           </Link>
+        </div>
+
+        <div className="p-2">
+          <Button to={`/cryptocurrencies/crypto/${coin.id}`}>Buy</Button>
         </div>
 
         <div className="text-center">${formatNumber(coin.current_price)}</div>

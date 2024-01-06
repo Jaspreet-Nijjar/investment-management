@@ -13,7 +13,7 @@ export const CryptocurrencyHeader = () => {
 
   const headerClasses = [
     'hidden md:block text-center text-orange-400 font-bold',
-    'text-center text-orange-400 font-bold',
+    'text-center text-orange-400 font-bold col-span-2',
     'text-center text-orange-400 font-bold',
     'hidden lg:block text-center text-orange-400 font-bold',
     'hidden lg:block text-center text-orange-400 font-bold',
@@ -25,7 +25,7 @@ export const CryptocurrencyHeader = () => {
 
   return (
     <div className="mx-auto max-w-screen-lg">
-      <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-10 p-4 border-b border-gray-200 text-xs">
+      <section className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-11 p-4 border-b border-gray-200 text-xs">
         {headers.map((header, index) => (
           <div key={index} className={headerClasses[index]}>
             {header}
