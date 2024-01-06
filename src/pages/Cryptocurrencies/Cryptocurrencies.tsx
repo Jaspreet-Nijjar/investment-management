@@ -6,11 +6,14 @@ import TradingVolumeCard from './components/CryptocurrencyCards/TradingVolumeCar
 import TrendingCoinsCard from './components/CryptocurrencyCards/TrendingCoinsCard';
 import CryptocurrencyFilters from './components/CryptocurrencyFilters/CryptocurrencyFilters';
 import Button from '../../components/common/Button';
+import { useGetCoinSummaryDataQuery } from '../../services/cryptoAPI';
 
 const Cryptocurrencies = () => {
+  const { data } = useGetCoinSummaryDataQuery(1);
+
   return (
     <>
-      <CoinSummaryData />
+      <CoinSummaryData data={data} />
 
       <main className="pb-32">
         <h1 className="text-center mt-4 text-xl font-semibold md:text-2xl">
@@ -24,8 +27,8 @@ const Cryptocurrencies = () => {
 
         <div className="flex flex-col pb-8 justify-center gap-6 xl:flex-row px-8">
           <section className="flex flex-col items-center justify-center">
-            <MarketCapCard />
-            <TradingVolumeCard />
+            <MarketCapCard data={data} />
+            <TradingVolumeCard data={data} />
           </section>
 
           <section className="flex flex-col items-center">

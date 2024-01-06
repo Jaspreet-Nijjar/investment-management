@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import Logo from './logo-no-background.png';
 import { MdError } from 'react-icons/md';
+import Logo from './logo-no-background.png';
 
 const NotFound = () => {
   return (

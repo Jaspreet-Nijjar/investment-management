@@ -3,16 +3,12 @@ import LoadingSpinner from '../../../../components/common/LoadingSpinner';
 import TrendingCoin from './TrendingCoin';
 
 const TrendingCoinsCard = () => {
-  const { data, isLoading, isError } = useGetTrendingCoinsQuery(1);
+  const { data, isLoading } = useGetTrendingCoinsQuery(1);
 
   const trendingCoins = data && data.coins ? data.coins.slice(0, 3) : [];
 
   if (isLoading) {
     return <LoadingSpinner />;
-  }
-
-  if (isError) {
-    return <p>There is currently an error.</p>;
   }
 
   return (
