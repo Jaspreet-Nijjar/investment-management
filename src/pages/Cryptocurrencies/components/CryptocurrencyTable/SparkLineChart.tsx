@@ -1,6 +1,7 @@
 import { useGetCoinHistoryQuery } from '../../../../services/cryptoAPI';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
+import LoadingSpinner from '../../../../components/common/LoadingSpinner';
 
 const SparkLineChart = ({ coinId }) => {
   const { data: coinHistoryData } = useGetCoinHistoryQuery(coinId);
@@ -9,7 +10,7 @@ const SparkLineChart = ({ coinId }) => {
   let timestamps = '';
 
   if (!coinHistoryData) {
-    return <div className="text-center">Loading...</div>;
+    return <LoadingSpinner />;
   }
 
   if (coinHistoryData) {
@@ -61,7 +62,7 @@ const SparkLineChart = ({ coinId }) => {
 
   return (
     <div>
-      <div className="hidden lg:block">
+      <div className="hidden lg:block w-32 h-16">
         <Line data={chartData} options={options} />
       </div>
     </div>

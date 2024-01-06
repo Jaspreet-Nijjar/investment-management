@@ -48,7 +48,7 @@ export default function CoinRow({ coin }: CoinProps) {
           </Link>
         </div>
 
-        <div className="p-2">
+        <div className="p-4">
           <Button to={`/cryptocurrencies/crypto/${coin.id}`}>Buy</Button>
         </div>
 

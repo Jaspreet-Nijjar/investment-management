@@ -99,7 +99,7 @@ const TrendingCategoriesBarChart: React.FC<TrendingCategoriesBarChartProps> = ({
   };
 
   return (
-    <div>
+    <div style={{ height: '300px', width: '500px', margin: 'auto' }}>
       <Bar data={data} options={options} />
     </div>
   );

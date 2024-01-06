@@ -11,7 +11,7 @@ const TrendingCategories = () => {
   const trendingCategories = data && data.categories.slice(0, 5);
 
   return (
-    <main className="mt-8 mx-auto w-96">
+    <main className="mt-8 mx-auto w-full">
       <section className="border border-gray-200 rounded">
         <h2 className="text-center font-bold">Trending Categories</h2>
         <p className="text-sm pt-2 text-center pb-6">
