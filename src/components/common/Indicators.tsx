@@ -7,7 +7,7 @@ interface IndicatorProps {
 
 const Indicators: React.FC<IndicatorProps> = ({ data, fontSize }) => {
   return (
-    <div className={`flex items-center justify-center text-sm ${fontSize}`}>
+    <div className={`flex items-center justify-center ${fontSize}`}>
       {data > 0 ? (
         <>
           <IoMdArrowDropup size={20} className="text-green-500" />

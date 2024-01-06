@@ -1,7 +1,10 @@
 import Button from '../../../../components/common/Button';
 import { formatNumber } from '../../../../utilities/formatNumber';
+import Indicators from '../../../../components/common/Indicators';
 
 const CoinDetails = ({ data }) => {
+  console.log(data);
+
   return (
     <section>
       <div className="flex items-center gap-4">
@@ -10,10 +13,15 @@ const CoinDetails = ({ data }) => {
         <Button>Rank # {data?.market_cap_rank}</Button>
       </div>
 
-      <div>
-        <p className="text-3xl mt-4">
+      <div className="flex gap-2 items-center  mt-4">
+        <p className="text-3xl">
           ${formatNumber(data?.market_data?.current_price?.usd)}
         </p>
+
+        <Indicators
+          data={data?.market_data?.price_change_percentage_24h}
+          fontSize="text-md"
+        />
       </div>
     </section>
   );
