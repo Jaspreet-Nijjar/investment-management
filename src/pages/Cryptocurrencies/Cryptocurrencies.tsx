@@ -43,7 +43,6 @@ const Cryptocurrencies = () => {
         <div className="flex flex-col items-center justify-center gap-2 mb-10 md:flex-row">
           <SearchBar placeholder="Search Cryptocurrencies" />
           <Button to="/portfolio">Portfolio</Button>
-          <Button to="/portfolio">Buy Cryptocurrency</Button>
         </div>
 
         <CryptocurrencyTable />

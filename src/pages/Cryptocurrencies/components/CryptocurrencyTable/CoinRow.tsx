@@ -2,6 +2,7 @@ import SparkLineChart from './SparkLineChart';
 import millify from 'millify';
 import { Link } from 'react-router-dom';
 import Indicators from '../../../../components/common/Indicators';
+import { formatNumber } from '../../../../utilities/formatNumber';
 
 interface CoinProps {
   coin: {
@@ -46,7 +47,7 @@ export default function CoinRow({ coin }: CoinProps) {
           </Link>
         </div>
 
-        <div className="text-center">${coin.current_price}</div>
+        <div className="text-center">${formatNumber(coin.current_price)}</div>
 
         <Indicators
           data={coin.price_change_percentage_1h_in_currency}
