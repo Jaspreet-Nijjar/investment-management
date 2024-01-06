@@ -1,11 +1,11 @@
-import { useGetCoinSummaryDataQuery } from '../../services/cryptoAPI';
+import { useGetCoinSummaryDataQuery } from '../../../../services/cryptoAPI';
 import millify from 'millify';
 import { CiCoinInsert } from 'react-icons/ci';
 import { BsCurrencyExchange } from 'react-icons/bs';
 import { SiCoinmarketcap } from 'react-icons/si';
 import { FaBitcoin, FaEthereum } from 'react-icons/fa';
-import LoadingSpinner from '../../common/LoadingSpinner';
-import Indicators from '../../common/Indicators';
+import LoadingSpinner from '../../../../components/common/LoadingSpinner';
+import Indicators from '../../../../components/common/Indicators';
 
 export const CoinSummaryData = () => {
   const { data, isLoading, isError } = useGetCoinSummaryDataQuery(1);

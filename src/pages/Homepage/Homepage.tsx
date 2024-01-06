@@ -1,6 +1,6 @@
-import TrendingCategories from '../components/TrendingCategories/TrendingCategories';
-import { TrendingCoins } from '../components/TrendingCoins/TrendingCoins';
 import Logo from '../images/logo.png';
+import { TrendingCoins } from './components/TrendingCoins/TrendingCoins';
+import TrendingCategories from './components/TrendingCategories/TrendingCategories';
 
 const Homepage = () => {
   return (

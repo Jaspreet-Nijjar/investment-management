@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { coinGeckoApi } from '../services/cryptoAPI';
 import searchBarReducer from '../components/SearchBar/searchBarSlice';
-import cryptocurrencyFilterReducer from '../components/CryptocurrencyFilters/cryptocurrencyFilterSlice';
+import cryptocurrencyFilterReducer from '../pages/Cryptocurrencies/components/CryptocurrencyFilters/cryptocurrencyFilterSlice';
 
 const rootReducer = combineReducers({
   coinGeckoApi: coinGeckoApi.reducer,

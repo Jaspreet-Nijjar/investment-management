@@ -1,11 +1,11 @@
-import CryptocurrencyTable from '../components/CryptocurrencyTable/CryptocurrencyTable';
-import SearchBar from '../components/SearchBar/SearchBar';
-import { CoinSummaryData } from '../components/CoinSummaryData/CoinSummaryData';
-import MarketCapCard from '../components/CryptocurrencyCards/MarketCapCard';
-import TradingVolumeCard from '../components/CryptocurrencyCards/TradingVolumeCard';
-import TrendingCoinsCard from '../components/CryptocurrencyCards/TrendingCoinsCard';
-import CryptocurrencyFilters from '../components/CryptocurrencyFilters/CryptocurrencyFilters';
-import Button from '../common/Button';
+import CryptocurrencyTable from './components/CryptocurrencyTable/CryptocurrencyTable';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import { CoinSummaryData } from './components/CoinSummaryData/CoinSummaryData';
+import MarketCapCard from './components/CryptocurrencyCards/MarketCapCard';
+import TradingVolumeCard from './components/CryptocurrencyCards/TradingVolumeCard';
+import TrendingCoinsCard from './components/CryptocurrencyCards/TrendingCoinsCard';
+import CryptocurrencyFilters from './components/CryptocurrencyFilters/CryptocurrencyFilters';
+import Button from '../../components/common/Button';
 
 const Cryptocurrencies = () => {
   return (

@@ -1,7 +1,7 @@
-import SparkLineChart from '../../components/SparkLineChart/SparkLineChart';
+import SparkLineChart from './SparkLineChart';
 import millify from 'millify';
 import { Link } from 'react-router-dom';
-import Indicators from '../../common/Indicators';
+import Indicators from '../../../../components/common/Indicators';
 
 interface CoinProps {
   coin: {

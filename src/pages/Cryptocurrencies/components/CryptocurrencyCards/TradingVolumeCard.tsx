@@ -1,6 +1,6 @@
-import { useGetCoinSummaryDataQuery } from '../../services/cryptoAPI';
-import LoadingSpinner from '../../common/LoadingSpinner';
-import { formatNumber } from '../../utilities/formatNumber';
+import { useGetCoinSummaryDataQuery } from '../../../../services/cryptoAPI';
+import LoadingSpinner from '../../../../components/common/LoadingSpinner';
+import { formatNumber } from '../../../../utilities/formatNumber';
 
 const TradingVolumeCard = () => {
   const { data, isLoading, isError } = useGetCoinSummaryDataQuery(1);

@@ -1,5 +1,5 @@
-import { useGetTrendingCoinsQuery } from '../../services/cryptoAPI';
-import LoadingSpinner from '../../common/LoadingSpinner';
+import { useGetTrendingCoinsQuery } from '../../../../services/cryptoAPI';
+import LoadingSpinner from '../../../../components/common/LoadingSpinner';
 import TrendingCoin from './TrendingCoin';
 
 const TrendingCoinsCard = () => {

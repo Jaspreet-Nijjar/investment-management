@@ -1,4 +1,4 @@
-import { useGetCoinHistoryQuery } from '../../services/cryptoAPI';
+import { useGetCoinHistoryQuery } from '../../../../services/cryptoAPI';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 

@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { useGetCoinsQuery } from '../../services/cryptoAPI';
+import { useGetCoinsQuery } from '../../../../services/cryptoAPI';
 import CoinList from './CoinList';
 import { useSelector } from 'react-redux';
 import { CryptocurrencyHeader } from './CryptocurrencyHeader';
-import { RootState } from '../../store/store';
+import { RootState } from '../../../../store/store';
 import { CoinData } from './types';
 
 export default function CryptocurrencyTable() {
