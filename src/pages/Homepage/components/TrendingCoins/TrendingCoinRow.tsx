@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useGetSingleCoinQuery } from '../../services/cryptoAPI';
-import LoadingSpinner from '../../common/LoadingSpinner';
-import ErrorState from '../../common/ErrorState';
+import { useGetSingleCoinQuery } from '../../../../services/cryptoAPI';
+import LoadingSpinner from '../../../../components/common/LoadingSpinner';
 
 interface TrendingCoinRowProps {
   coin: {
@@ -13,15 +12,15 @@ interface TrendingCoinRowProps {
 }
 
 const TrendingCoinRow: React.FC<TrendingCoinRowProps> = ({ coin }) => {
-  const { data, isLoading, isError } = useGetSingleCoinQuery(coin.id);
+  const { data, isLoading } = useGetSingleCoinQuery(coin.id);
 
   if (isLoading) {
     return <LoadingSpinner />;
   }
 
-  if (isError || !data) {
-    return <ErrorState />;
-  }
+  // if (isError || !data) {
+  //   return <ErrorState />;
+  // }
 
   return (
     <div className="text-sm grid grid-cols-2 gap-6 text-center p-2">

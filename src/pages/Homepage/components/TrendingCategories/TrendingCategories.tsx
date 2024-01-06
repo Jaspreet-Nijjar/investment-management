@@ -1,16 +1,11 @@
-import { useGetTrendingCoinsQuery } from '../../services/cryptoAPI';
-import ErrorState from '../../common/ErrorState';
+import { useGetTrendingCoinsQuery } from '../../../../services/cryptoAPI';
 import TrendingCategoriesBarChart from './TrendingCategoriesBarChart';
 
 const TrendingCategories = () => {
-  const { data, isLoading, isError } = useGetTrendingCoinsQuery(1);
+  const { data, isLoading } = useGetTrendingCoinsQuery(1);
 
   if (isLoading) {
     return <div>Is Loading...</div>;
-  }
-
-  if (isError) {
-    return <ErrorState />;
   }
 
   const trendingCategories = data && data.categories.slice(0, 5);

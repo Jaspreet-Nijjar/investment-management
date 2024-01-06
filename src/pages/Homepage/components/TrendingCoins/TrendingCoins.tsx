@@ -1,19 +1,14 @@
-import { useGetTrendingCoinsQuery } from '../../services/cryptoAPI';
+import { useGetTrendingCoinsQuery } from '../../../../services/cryptoAPI';
 import { TrendingCoinRowHeader } from './TrendingCoinRowHeader';
 import TrendingCoinRow from './TrendingCoinRow';
 import { Link } from 'react-router-dom';
 import { FadeLoader } from 'react-spinners';
-import ErrorState from '../../common/ErrorState';
 
 export const TrendingCoins = () => {
-  const { data, isLoading, isError } = useGetTrendingCoinsQuery(1);
+  const { data, isLoading } = useGetTrendingCoinsQuery(1);
 
   if (isLoading) {
     return <FadeLoader color="#FFA500" />;
-  }
-
-  if (isError) {
-    return <ErrorState />;
   }
 
   const trendingCoins = data && data.coins ? data.coins.slice(0, 5) : [];

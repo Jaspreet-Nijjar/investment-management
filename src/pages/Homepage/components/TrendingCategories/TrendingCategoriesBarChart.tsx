@@ -1,6 +1,6 @@
 import { Bar } from 'react-chartjs-2';
 import 'chart.js/auto';
-import { useGetCoinCategoriesQuery } from '../../services/cryptoAPI';
+import { useGetCoinCategoriesQuery } from '../../../../services/cryptoAPI';
 import millify from 'millify';
 import { FadeLoader } from 'react-spinners';
 
