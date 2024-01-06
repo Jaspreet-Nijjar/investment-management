@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import CryptocurrencyDetails from '../components/CryptocurrencyDetails/CryptocurrencyDetails';
+import CryptocurrencyDetails from './components/CryptocurrencyDetails/CryptocurrencyDetails';
 
 const SingleCryptoDetailsPage = () => {
   const { id } = useParams();

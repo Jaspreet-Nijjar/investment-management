@@ -1,5 +1,5 @@
-import { useGetSingleCoinQuery } from '../../services/cryptoAPI';
-import BuyCryptocurrencyForm from '../Forms/BuyCryptocurrencyForm';
+import { useGetSingleCoinQuery } from '../../../../services/cryptoAPI';
+import BuyCryptocurrencyForm from './BuyCryptocurrencyForm';
 import CryptocurrencyInformation from './CryptocurrencyInformation';
 
 const CryptocurrencyDetails = ({ id }) => {
