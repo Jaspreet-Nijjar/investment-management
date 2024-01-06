@@ -12,6 +12,7 @@ import {
   Stocks,
   Cryptocurrencies,
   SingleCryptoDetailsPage,
+  NotFound,
 } from './pages';
 import RootLayout from './layouts/RootLayout';
 
@@ -30,6 +31,7 @@ function App() {
           />
 
           <Route path="/news" element={<News />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </>
     )

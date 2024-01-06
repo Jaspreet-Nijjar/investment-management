@@ -1,4 +1,4 @@
-import Logo from '../images/logo.png';
+import Logo from '../../images/logo.png';
 import { TrendingCoins } from './components/TrendingCoins/TrendingCoins';
 import TrendingCategories from './components/TrendingCategories/TrendingCategories';
 
