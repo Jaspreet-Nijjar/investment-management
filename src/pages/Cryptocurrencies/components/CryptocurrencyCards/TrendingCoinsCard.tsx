@@ -1,6 +1,6 @@
 import { useGetTrendingCoinsQuery } from '../../../../services/cryptoAPI';
 import LoadingSpinner from '../../../../components/common/LoadingSpinner';
-import TrendingCoin from './TrendingCoin';
+import TrendingCoin, { CoinProps } from './TrendingCoin';
 
 const TrendingCoinsCard = () => {
   const { data, isLoading } = useGetTrendingCoinsQuery(1);
@@ -18,8 +18,8 @@ const TrendingCoinsCard = () => {
       </h1>
 
       <div>
-        {trendingCoins.map((coin) => (
-          <TrendingCoin coin={coin} key={coin.id} />
+        {trendingCoins.map((coin: CoinProps) => (
+          <TrendingCoin coin={coin} key={coin.item.id} />
         ))}
       </div>
     </div>

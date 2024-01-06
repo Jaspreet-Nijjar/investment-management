@@ -1,8 +1,9 @@
 import Indicators from '../../../../components/common/Indicators';
 
-interface CoinProps {
+export interface CoinProps {
   coin: {
     item: {
+      id?: string;
       thumb: string;
       name: string;
       data: {
@@ -15,7 +16,7 @@ interface CoinProps {
   };
 }
 
-const TrendingCoin = ({ coin }: CoinProps) => {
+const TrendingCoin: React.FC<CoinProps> = ({ coin }) => {
   return (
     <>
       <div className="grid grid-cols-2 items-center justify-center">
