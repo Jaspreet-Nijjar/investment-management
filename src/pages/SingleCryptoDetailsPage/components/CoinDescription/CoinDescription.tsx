@@ -8,7 +8,7 @@ const CoinDescription = ({ data }) => {
 
   return (
     <section>
-      <h1 className="pt-10 text-gray-500">About {data?.name}</h1>
+      <p className="pt-10 text-gray-500">About {data?.name}</p>
       <p
         dangerouslySetInnerHTML={{
           __html: DOMPurify.sanitize(data?.description?.en),
