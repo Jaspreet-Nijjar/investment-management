@@ -54,25 +54,33 @@ export default function CoinRow({ coin }: CoinProps) {
 
         <div className="text-center">${formatNumber(coin.current_price)}</div>
 
-        <Indicators
-          data={coin.price_change_percentage_1h_in_currency}
-          fontSize="text-xs"
-        />
-        <Indicators
-          data={coin.price_change_percentage_24h}
-          fontSize="text-xs"
-        />
-        <Indicators
-          data={coin.price_change_percentage_7d_in_currency}
-          fontSize="text-xs"
-        />
+        <div className="hidden lg:block">
+          <Indicators
+            data={coin.price_change_percentage_1h_in_currency}
+            fontSize="text-xs"
+          />
+        </div>
+
+        <div className="hidden lg:block">
+          <Indicators
+            data={coin.price_change_percentage_24h}
+            fontSize="text-xs"
+          />
+        </div>
+
+        <div className="hidden lg:block">
+          <Indicators
+            data={coin.price_change_percentage_7d_in_currency}
+            fontSize="text-xs"
+          />
+        </div>
 
         <div className="hidden md:block text-center">
           ${millify(coin.market_cap)}
         </div>
 
         <div className="col-span-2">
-          <div className="hidden md:flex justify-around text-xs">
+          <div className="hidden lg:flex justify-around text-xs">
             <p>${millify(coin.circulating_supply)}</p>
             <p>${millify(coin.total_supply)}</p>
           </div>
