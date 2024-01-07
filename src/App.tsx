@@ -9,7 +9,6 @@ import {
   Homepage,
   News,
   Portfolio,
-  Stocks,
   Cryptocurrencies,
   SingleCryptoDetailsPage,
   NotFound,
@@ -23,7 +22,6 @@ function App() {
         <Route path="/" element={<RootLayout />}>
           <Route path="/" element={<Homepage />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/stocks" element={<Stocks />} />
           <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
           <Route
             path={'/cryptocurrencies/crypto/:id'}
