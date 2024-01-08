@@ -1,6 +1,4 @@
 import Logo from '../../images/logo.png';
-import { TrendingCoins } from './components/TrendingCoins/TrendingCoins';
-import TrendingCategories from './components/TrendingCategories/TrendingCategories';
 
 const Homepage = () => {
   return (
@@ -17,7 +15,7 @@ const Homepage = () => {
 
         <p className="text-sm p-2">
           Welcome to Virtual Portfolio. The all-in-one solution to monitor the
-          market of cryptocurrencies and stock investments{' '}
+          cryptocurrency market{' '}
           <span className="text-orange-400">in real-time.</span> Manage your
           asset collection with our{' '}
           <span className="text-orange-400">
@@ -25,17 +23,7 @@ const Homepage = () => {
           </span>{' '}
           allowing you to track the performance of your investments.
         </p>
-        <p className="text-lg py-6">
-          Curious about the{' '}
-          <span className="text-orange-400">latest trends?</span> Explore our
-          dashboard below for a comprehensive overview of current
-          cryptocurrencies and stocks
-        </p>
       </div>
-      <main className="pb-32 grid grid-cols-1 md:grid-cols-2">
-        <TrendingCoins />
-        <TrendingCategories />
-      </main>
     </>
   );
 };
