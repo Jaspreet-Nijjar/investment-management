@@ -1,3 +1,4 @@
+import Error from '../../components/common/Error';
 import Logo from '../../images/logo.png';
 
 const Homepage = () => {
@@ -24,6 +25,8 @@ const Homepage = () => {
           allowing you to track the performance of your investments.
         </p>
       </div>
+
+      <Error />
     </>
   );
 };
