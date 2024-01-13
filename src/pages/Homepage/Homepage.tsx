@@ -1,4 +1,3 @@
-import Error from '../../components/common/Error';
 import Logo from '../../images/logo.png';
 
 const Homepage = () => {
@@ -11,22 +10,23 @@ const Homepage = () => {
           className="object-cover w-96 mx-auto"
         />
         <p className="text-orange-400 mt-1 text-lg">
-          Real-Time Market Monitoring and Portfolio Management
+          Crypto Market Tracking <span className="text-white">and</span>{' '}
+          Portfolio Management
         </p>
 
-        <p className="text-sm p-2">
-          Welcome to Virtual Portfolio. The all-in-one solution to monitor the
-          cryptocurrency market{' '}
-          <span className="text-orange-400">in real-time.</span> Manage your
-          asset collection with our{' '}
+        <p className="text-md mt-8 px-24 text-center">
+          Welcome to Virtual Portfolio. The all-in-one solution for in-depth{' '}
+          <span className="text-orange-400">
+            cryptocurrency market monitoring.
+          </span>{' '}
+          Explore the features of our user-friendly platform designed for
+          insights and effortlessly manage your digital assets with our{' '}
           <span className="text-orange-400">
             intuitive portfolio management system
           </span>{' '}
-          allowing you to track the performance of your investments.
+          allowing you to closely track the performance of your investments.
         </p>
       </div>
-
-      <Error />
     </>
   );
 };
