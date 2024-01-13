@@ -3,6 +3,7 @@ import TrendingCategoriesBarChart from './TrendingCategoriesBarChart';
 
 const TrendingCategories = () => {
   const { data, isLoading } = useGetTrendingCoinsQuery(1);
+  console.log(data);
 
   if (isLoading) {
     return <div>Is Loading...</div>;

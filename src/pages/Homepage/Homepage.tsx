@@ -1,4 +1,6 @@
 import Logo from '../../images/logo.png';
+import TrendingCategories from './components/TrendingCategories/TrendingCategories';
+import { TrendingCoins } from './components/TrendingCoins/TrendingCoins';
 
 const Homepage = () => {
   return (
@@ -27,6 +29,12 @@ const Homepage = () => {
           allowing you to closely track the performance of your investments.
         </p>
       </div>
+
+      <section className="p-6">
+        <h1 className="font-bold text-3xl">Crypto Market Today</h1>
+        <TrendingCoins />
+        <TrendingCategories />
+      </section>
     </>
   );
 };
