@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useGetSingleCoinQuery } from '../../../../services/cryptoAPI';
 import LoadingSpinner from '../../../../components/common/LoadingSpinner';
+import Error from '../../../../components/common/Error';
 
 interface TrendingCoinRowProps {
   coin: {
@@ -12,19 +13,14 @@ interface TrendingCoinRowProps {
 }
 
 const TrendingCoinRow: React.FC<TrendingCoinRowProps> = ({ coin }) => {
-  const { data, isLoading, error } = useGetSingleCoinQuery(coin.id);
+  const { data, isLoading } = useGetSingleCoinQuery(coin.id);
 
   if (isLoading) {
     return <LoadingSpinner />;
   }
 
-  if (error) {
-    // Use type assertion to tell TypeScript that 'message' exists
-    const errorMessage = (error as FetchBaseQueryError).message;
-
-    // Now you can safely use 'errorMessage'
-    console.error('Error fetching data:', errorMessage);
-    return <p>Error fetching data: {errorMessage}</p>;
+  if (!data) {
+    return <Error />;
   }
 
   return (

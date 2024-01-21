@@ -16,7 +16,7 @@ const Homepage = () => {
           Portfolio Management
         </p>
 
-        <p className="text-md mt-8 px-24 text-center">
+        <p className="text-md mt-8 md:px-24 text-center">
           Welcome to Virtual Portfolio. The all-in-one solution for in-depth{' '}
           <span className="text-orange-400">
             cryptocurrency market monitoring.
